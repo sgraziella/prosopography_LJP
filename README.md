@@ -1,1 +1,2 @@
-# prosopography
+# Prosopography
+Digital repository about prosopography
