@@ -19,6 +19,11 @@
                 Catalogage : forme et structure de vedettes noms de personne, des vedettes titres, des rubriques de classement et des titres
                 forgés</citation>
         </conventionDeclaration>
+        <conventionDeclaration>
+            <citation>Ontologie pour caractériser les relations : http://purl.org/vocab/relationship</citation>
+        </conventionDeclaration>
+
+
         <!-- ici il faudrait la déclaration du vocabulaire local (utilisé notamment pour expliciter ensuite les rélations) -->
         <localTypeDeclaration>
             <citation/>
@@ -30,7 +35,7 @@
                 <agentType>human</agentType>
                 <agent>Graziella Pastore (Ecole nationale des chartes - INRIA Alpage)</agent>
                 <eventDescription>Redaction de la notice sur la base des informations fournies par H. Stein (Stein 1918); les informations extraites
-                    des ouvrages cités dans les sources ont été controlées.</eventDescription>
+                    des ouvrages cités dans les sources ont été verifiées sur les originaux.</eventDescription>
             </maintenanceEvent>
         </maintenanceHistory>
         <sources>
@@ -93,12 +98,24 @@
                     <toDate standardDate="1287"/>
                 </dateRange>
             </existDates>
+
+            <!-- à préciser si possible -->
             <place>
                 <placeEntry>Gâtinais</placeEntry>
             </place>
-            <function>
-                <term>Seigneur de Saint-Brisson près de Gien et de Chatillon-sur-Loing, il exerça la fonction de bouteiller de France.</term>
-            </function>
+
+            <!-- Synthèse des fonctions principales -->
+            <functions>
+                <function>
+                    <term>Seigneur de Saint-Brisson près de Gien et de Chatillon-sur-Loing</term>
+                </function>
+                <function>
+                    <term>Bouteiller de France</term>
+                    <dateRange>
+                        <fromDate notBefore="1239">1239</fromDate>
+                    </dateRange>
+                </function>
+            </functions>
 
             <!-- Biographie présentée ici sous forme d'une liste chronologique  -->
             <biogHist>
@@ -123,45 +140,55 @@
             </biogHist>
         </description>
 
-        <!-- Rélations -->
+        <!-- Rélations ; préciser où placer le lien vers la notice d'autorité de l'entité -->
         <relations>
-            <cpfRelation xlink:href="http://viaf.org/viaf/261887210">
+            <cpfRelation cpfRelationType="family" xlink:type="simple" xlink:arcrole="descendantOf"
+                xlink:href="http://purl.org/vocab/relationship/descendantOf">
                 <relationEntry localType="grand-père">Thibaud IV comte de Champagne</relationEntry>
                 <descriptiveNote>
                     <p>Grand-père</p>
+                    <p>http://viaf.org/viaf/261887210</p>
                 </descriptiveNote>
             </cpfRelation>
-            <cpfRelation>
+            <cpfRelation cpfRelationType="family" xlink:type="simple" xlink:arcrole="spouseOf"
+                xlink:href="http://purl.org/vocab/relationship/spouseOf">
                 <relationEntry localType="épouse">Eleonore de Soissons</relationEntry>
                 <descriptiveNote>
                     <p>Prèmiere femme (veuve du comte de Beaumont)</p>
                 </descriptiveNote>
             </cpfRelation>
-            <cpfRelation>
+            <cpfRelation cpfRelationType="family" xlink:type="simple" xlink:arcrole="childOf" 
+                xlink:href="http://purl.org/vocab/relationship/childOf">
                 <relationEntry localType="fils">Etienne de Sancerre</relationEntry>
                 <descriptiveNote>
                     <p>Le fils, mort avant son père</p>
                 </descriptiveNote>
             </cpfRelation>
-            <cpfRelation cpfRelationType="associative">
+            <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
+                xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
                 <relationEntry>Jean de Beaumont</relationEntry>
             </cpfRelation>
-            <cpfRelation cpfRelationType="associative">
+            <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
+                xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
                 <relationEntry>Adam de Beaumont le père</relationEntry>
             </cpfRelation>
-            <cpfRelation cpfRelationType="associative">
+            <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
+                xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
                 <relationEntry>Adam de Beaumont le fils</relationEntry>
             </cpfRelation>
-            <cpfRelation cpfRelationType="associative">
+            <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
+                xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
                 <relationEntry>Geoffroy de la Chapelle</relationEntry>
             </cpfRelation>
-            <cpfRelation cpfRelationType="associative">
+            <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
+                xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
                 <relationEntry>Renaud de Tricot</relationEntry>
             </cpfRelation>
 
-            <!-- Rélations avec le LJP (ressource bibliographique); indiquer ici toutes les occurrences dans lesquelles l'entité est citée ? -->
-            <resourceRelation xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f/f172.image">
-                <relationEntry>Li livres de jostice et de plet, p. 114.</relationEntry>
+            <!-- Relation avec une ressource bibliographique, pour le moment renvoi à l'édition papier du LJP ; 
+                intégrer ensuite renvoi à l'édition XML/TEI sur ELEC  -->
+            <resourceRelation xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
+                <relationEntry>Li livres de jostice et de plet</relationEntry>
             </resourceRelation>
         </relations>
 
