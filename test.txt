@@ -1,5 +1,0 @@
-Un fichier de test pour gitHub
-
-Avec une modification depuis gitHub
-
-Avec une deuxième modification depuis ma machine locale
