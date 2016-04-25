@@ -193,7 +193,9 @@
                         <event>Il prit part à l'expedition d'Angleterre, et servit de caution à
                             Robert de Courtenay quand Philippe-Auguste exigea de celui-ci des
                             garanties sérieuses pour l'admettre à la Court (Mémoires de la Société
-                            des antiquaires de France, 4e série, t. I, 1869, p. 190-197).</event>
+                            des antiquaires de France, 4e série, t. I, 1869, p. 190-197).
+                        </event>
+                        
                     </chronItem>
                     <chronItem>
                         <date standardDate="1224">1224</date>
@@ -310,16 +312,17 @@
         </description>
 
         <!-- Relations -->
-        <!--Utiliser l'ontologie relationship pour caractériser les relations finement si besoin http://purl.org/vocab/relationship -->
+        <!--Utiliser l'ontologie relationship pour caractériser les relations finement si besoin http://purl.org/vocab/relationship
+        http://eaditor.blogspot.fr/2013/11/maintaining-relationships-in-eac-cpf.html -->
         <relations>
-            <cpfRelation cpfRelationType="family">
+            <cpfRelation cpfRelationType="family" >
                 <relationEntry>Beaumont-du-Gâtinais (famille)</relationEntry>
                 <descriptiveNote>
                     <p>Emile Richemond, Recherches généalogiques sur la famille des seigneurs de
                         Nemours, t. II (1908), pp. 183 ss.</p>
                 </descriptiveNote>
             </cpfRelation>
-            <cpfRelation>
+            <cpfRelation cpfRelationType="family" xlink:type="simple" xlink:arcrole="parentOf" xlink:href="http://purl.org/vocab/relationship/parentOf">
                 <relationEntry localType="père">Adam de Beaumont</relationEntry>
                 <descriptiveNote>
                     <p>Chambellan du roi, seigneur de Batilly, Beaune-la-Rolande et
