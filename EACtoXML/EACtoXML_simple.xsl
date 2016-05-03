@@ -11,20 +11,24 @@
     <xsl:template match="/">
         <AUTORITYFILE>
             <PERSON>
-                <xsl:apply-templates select="eac:eac-cpf"/>
+                <xsl:apply-templates/>
             </PERSON>
         </AUTORITYFILE>
     </xsl:template>
 
 
-    <xsl:template match="eac:eac-cpf">
+    <xsl:template match="eac:recordId">
         <!-- from control -->
         <RECORDID>
-            <xsl:value-of select="descendant::eac:recordId"/>
+            <xsl:value-of select="."/>
         </RECORDID>
+    </xsl:template>
+    <xsl:template match="eac:agencyName">
         <AGENCYNAME>
-            <xsl:value-of select="descendant::eac:maintenanceAgency/eac:agencyName"/>
+            <xsl:value-of select="."/>
         </AGENCYNAME>
+    </xsl:template>
+    <!--
         <EVENTDATETIME>
             <xsl:value-of
                 select="descendant::eac:maintenanceHistory/eac:maintenanceEvent/eac:eventDateTime"/>
@@ -34,12 +38,22 @@
             />
         </AGENT>
         <SOURCES>
-            <!-- <xsl:value-of select="descendant::eac:sources"/> -->
-            <xsl:apply-templates select="eac-cpf/control/sources"/>
-        </SOURCES>
+    -->
+    <xsl:template match="eac:source">
+        <SOURCE>        
+        <xsl:value-of select="."/>
+            </SOURCE>
+    </xsl:template>
+    
+    <xsl:template match="eac:languageDeclaration/eac:language"/>
+    
+    <xsl:template match="eac:identity/eac:nameEntry">
+        <NAMEENTRY><xsl:value-of select="eac:part[@localType='prenom']"/><xsl:text> </xsl:text><xsl:value-of select="eac:part[@localType='nom']"/></NAMEENTRY>
+    </xsl:template>
+        <!--</SOURCES>-->
 
         <!-- from cpfDescription -->
-        <NAMEENTRY>
+       <!-- <NAMEENTRY>
             <xsl:value-of select="descendant::eac:identity/eac:nameEntry"/>
         </NAMEENTRY>
         <EXISTFROMDATE>
@@ -65,14 +79,17 @@
             <xsl:value-of select="descendant::eac:cpfDescription/eac:relations"/>
         </RELATIONS>
     </xsl:template>
-    
+    -->
     
     <!-- ici il faudrait le template pour importer les sources -->
-    <xsl:template match="eac:eac-cpf/control/sources">
-        <xsl:for-each select="descendant::eac:sources/source">
+   <!-- <xsl:template match="eac:source">
+        <!-\-<xsl:for-each select="descendant::eac:sources/source">
             <xsl:value-of select="descendant::eac:sources/source/sourceEntry"/>
-        </xsl:for-each>
+        </xsl:for-each>-\->
+        <SOURCE>
+        <xsl:value-of select="."/>
+        </SOURCE>
     </xsl:template>
-
+-->
 
 </xsl:stylesheet>
