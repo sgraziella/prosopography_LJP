@@ -78,8 +78,8 @@
             <entityType>person</entityType>
             <!-- Forme autorisée du nom structurée dans différents éléments <part> permettant de distinguer la nature de chaque composante du nom -->
             <nameEntry>
-                <part localType="nom">Sancerre</part>
-                <part localType="prenom">Etienne de</part>
+                <part localType="nom">de Sancerre</part>
+                <part localType="prenom">Etienne</part>
                 <authorizedForm>AFNOR_NF_Z_44-061</authorizedForm>
             </nameEntry>
             <nameEntryParallel>
@@ -95,8 +95,8 @@
         <description>
             <existDates>
                 <dateRange>
-                    <fromDate standardDate="1239"/>
-                    <toDate standardDate="1287"/>
+                    <fromDate standardDate="1239">1239</fromDate>
+                    <toDate standardDate="1287">1287</toDate>
                 </dateRange>
             </existDates>
 
