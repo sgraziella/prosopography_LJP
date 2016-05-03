@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- @sgraziella https://github.com/sgraziella/prosopography_LJP
+    entityType = person;
     Really basic transformation from EAC-CPF to XML in order to add un intermediate stylesheet
     in XMLImport Omeka plugin https://github.com/Daniel-KM/XmlImport -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
