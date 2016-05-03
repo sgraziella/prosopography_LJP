@@ -17,7 +17,6 @@
     </xsl:template>
 
 
-
     <!-- Templates for control elements -->
     <xsl:template match="eac:recordId">
         <RECORDID>
@@ -53,7 +52,6 @@
             <xsl:value-of select="."/>
         </SOURCE>
     </xsl:template>
-
 
 
 
@@ -106,17 +104,5 @@
             <xsl:value-of select="."/>
         </RELATIONS>
     </xsl:template>
-
-
-    <!-- ici il faudrait le template pour importer les sources -->
-    <!-- <xsl:template match="eac:source">
-        <!-\-<xsl:for-each select="descendant::eac:sources/source">
-            <xsl:value-of select="descendant::eac:sources/source/sourceEntry"/>
-        </xsl:for-each>-\->
-        <SOURCE>
-        <xsl:value-of select="."/>
-        </SOURCE>
-    </xsl:template>
--->
 
 </xsl:stylesheet>
