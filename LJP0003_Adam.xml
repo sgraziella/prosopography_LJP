@@ -75,6 +75,9 @@ identités officielles) qui font chacune l’objet de descriptions différencié
                         </tei:imprint>
                     </tei:bibl>
                 </objectXMLWrap>
+                <descriptiveNote>
+                    <p>Cité aux pages : 133, 229-234, 243, 247</p>
+                </descriptiveNote>
             </source>
         </sources>
     </control>
@@ -132,8 +135,6 @@ identités officielles) qui font chacune l’objet de descriptions différencié
                 </resourceRelation>
             </relations>
         </cpfDescription>
-
-
 
         <cpfDescription>
             <identity>
@@ -259,9 +260,6 @@ identités officielles) qui font chacune l’objet de descriptions différencié
                 <resourceRelation xlink:type="simple"
                     xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
                     <relationEntry>Li livres de jostice et de plet</relationEntry>
-                    <descriptiveNote>
-                        <p>Cité aux pages : 133, 229-234, 243, 247 de l'édition Rapetti (1850)</p>
-                    </descriptiveNote>
                 </resourceRelation>
             </relations>
         </cpfDescription>
