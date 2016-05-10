@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="EACtoTEI.xsl" ?>
+<eac-cpf xsi:schemaLocation="urn:isbn:1-931666-33-4 cpf.xsd" xmlns="urn:isbn:1-931666-33-4"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <!-- Exemple de notice d'autorité pour une personne -->
+    <control>
+        <recordId>LJP0004</recordId>
+        <maintenanceStatus>new</maintenanceStatus>
+        <publicationStatus>inProcess</publicationStatus>
+        <maintenanceAgency>
+            <agencyName>INRIA Paris</agencyName>
+        </maintenanceAgency>
+        <languageDeclaration>
+            <language languageCode="fre">français</language>
+            <script scriptCode="Latn">latin</script>
+        </languageDeclaration>
+        <conventionDeclaration>
+            <citation>Notice établie conformément aux normes ISAAR (CPF) du Conseil international
+                des Archives et AFNOR NF Z 44-061, 1er juin 1986 Catalogage : forme et structure de
+                vedettes noms de personne, des vedettes titres, des rubriques de classement et des
+                titres forgés</citation>
+        </conventionDeclaration>
+        <conventionDeclaration xml:lang="eng">
+            <citation>Ontologie pour caractériser les relations :
+                http://purl.org/vocab/relationship</citation>
+        </conventionDeclaration>
+
+        <!-- ici il faudrait la déclaration du vocabulaire local (utilisé notamment pour expliciter ensuite les rélations) -->
+        <localTypeDeclaration xml:lang="fra">
+            <citation/>
+        </localTypeDeclaration>
+
+        <maintenanceHistory>
+            <maintenanceEvent>
+                <eventType>created</eventType>
+                <eventDateTime>2016-05-09</eventDateTime>
+                <agentType>human</agentType>
+                <agent>Graziella Pastore (Ecole nationale des chartes - INRIA Alpage)</agent>
+                <eventDescription>Rédaction de la notice sur la base des informations fournies par
+                    H. Stein (Stein 1918); les informations extraites des ouvrages cités dans la
+                    section Sources ont été verifiées sur les originaux.</eventDescription>
+            </maintenanceEvent>
+        </maintenanceHistory>
+
+        <sources>
+            <source xlink:type="simple" xlink:href="http://catalogue.bnf.fr/ark:/12148/cb31402172t">
+                <sourceEntry>Stein Henri, Conjectures sur l'auteur du "Livre de jostice et de plet",
+                    Nouvelle revue historique de droit français et étranger, Paris, E. Tenin,
+                    1918</sourceEntry>
+            </source>
+            <source xlink:type="simple"
+                xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k76084q/f632.image">
+                <sourceEntry>Histoire généalogique et chronologique de la maison royale de France,
+                    des pairs, grands officiers de la Couronne, de la Maison du Roy et des anciens
+                    barons du royaume..., par le Père Anselme, Paris, 1726-1733, t. 8, p.
+                    604</sourceEntry>
+            </source>
+            <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k501426">
+                <sourceEntry>"Geoffroy de la Chapelle" dans Recueil des historiens des Gaules et de
+                    la France, nouv. éd. publ. sous la dir. de M. Léopold Delisle, Paris, 1840-1904,
+                    t. XXIV, p. 110-112; p. 315</sourceEntry>
+            </source>
+            <source xlink:type="simple"
+                xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k112242q/f484.image">
+                <sourceEntry>Recueil de pièces pour faire suite au Cartulaire général de l'Yonne :
+                    XIIIe siècle, publié par la Société des sciences historiques et naturelles de
+                    l'Yonne, sous la direction de Max. Quantin, 1873, p. 388-389</sourceEntry>
+            </source>
+            <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k501426">
+                <sourceEntry>Recherches sur divers services publics du XIIIe au XVIIe siècle, par le
+                    colonel Borrelli de Serres, Paris, 1895-1909, t. 1 (1885), p. 30, 219, 314,
+                    609</sourceEntry>
+            </source>
+            <source xlink:type="simple" xlink:href="http://catalogue.bnf.fr/ark:/12148/cb37410683d">
+                <sourceEntry>Boutaric Edgard, Actes du Parlement de Paris, fac-sim. de l'éd. de
+                    Paris, H. Plon, 1863-1867, t. I, p. CCCVIII</sourceEntry>
+            </source>
+            <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k102413f">
+                <sourceEntry>Jean sire de Joinville, Histoire de saint Louis, Credo et Lettre à
+                    Louis X, texte original, accompagné d'une trad. par M. Natalis de Wailly, Paris,
+                    1874, p. 56, 58, 76, 81, 85, 88, 89, 93, 139, 161, 234, 244, 246,
+                    213</sourceEntry>
+            </source>
+            <source xlink:type="simple" xlink:href="http://catalogue.bnf.fr/ark:/12148/cb35775664t">
+                <sourceEntry>Langlois, Charles-Victor, La vie en France au Moyen âge d'après
+                    quelques moralistes du temps, Paris 1908</sourceEntry>
+            </source>
+            <source xlink:type="simple"
+                xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k2042639/f382.image">
+                <sourceEntry>Cartulaire de l'abbaye de Saint-Michel du Tréport, par P. Laffleur De
+                    Kermaingant, Paris, 1880, p. 220</sourceEntry>
+            </source>
+            <!-- <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k118197p">
+                <sourceEntry>Le Nain de Tillemont, Vie de saint Louis, roi de France, Paris, 1848, t. II, p. 146, 495</sourceEntry>
+                le renvoi de Stein ne correspond pas à la source
+            </source>-->
+            <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
+                <!-- On a rapatrié ici des éléments provenant d'espaces de noms externes appropriés pour faire référence à des ressources 
+                    bibliographiques -->
+                <objectXMLWrap>
+                    <tei:bibl xmlns:tei="http://www.tei-c.org/ns/1.0">
+                        <tei:author>Rapetti (Pierre-Nicolas)</tei:author>
+                        <tei:title>
+                            <tei:emph rend="italic">Li livres de jostice et de plet</tei:emph>
+                        </tei:title>
+                        <tei:imprint>
+                            <tei:pubPlace>Paris</tei:pubPlace>
+                            <tei:publisher>Firmin Didot Frères</tei:publisher>
+                            <tei:date>1850</tei:date>
+                        </tei:imprint>
+                    </tei:bibl>
+                </objectXMLWrap>
+            </source>
+        </sources>
+    </control>
+
+    <cpfDescription>
+        <identity>
+            <entityType>person</entityType>
+            <!-- Forme autorisée du nom structurée dans différents éléments <part> -->
+            <nameEntry>
+                <part localType="nom">de la Chapelle</part>
+                <part localType="prénom">Geoffroy</part>
+                <authorizedForm>AFNOR_NF_Z_44-061</authorizedForm>
+            </nameEntry>
+        </identity>
+        <description>
+            <existDates>
+                <dateRange>
+                    <fromDate notAfter="1209">1209</fromDate>
+                    <toDate notAfter="1260">1260</toDate>
+                </dateRange>
+            </existDates>
+
+            <!-- à préciser si possible -->
+            <place>
+                <placeEntry>La-Chapelle-la-Reine</placeEntry>
+                <placeEntry>Gâtinais</placeEntry>
+            </place>
+
+            <!-- Synthèse des fonctions principales; l'élément <term> ne peut pas contenir de phrases -->
+            <functions>
+                <function>
+                    <term>Panetier de France</term>
+                </function>
+                <function>
+                    <term>Bailli</term>
+                    <placeEntry>Caux</placeEntry>
+                    <dateRange>
+                        <fromDate notBefore="1212">1212</fromDate>
+                    </dateRange>
+                </function>
+                <function>
+                    <term>Châtelain</term>
+                    <placeEntry>Arques</placeEntry>
+                    <dateRange>
+                        <fromDate notBefore="1216">1216</fromDate>
+                        <toDate notAfter="1219">1219</toDate>
+                    </dateRange>
+                </function>
+            </functions>
+
+            <biogHist>
+                <!-- Biographie présentée ici sous forme d'une liste chronologique  -->
+                <chronList>
+                    <chronItem>
+                        <date standardDate="1215">1215</date>
+                        <event>Il préside les assises à Arques</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1220">1220</date>
+                        <event>Choisi comme arbitre par l'archevêque de Rouen</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1220">1220</date>
+                        <event>Enquête sur les droits de justice dans la châtellenie de
+                            Vernon</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1224">1224</date>
+                        <event>Figure à la court du roi à Gisors</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1226">1226</date>
+                        <event>Assiste aux sessions de l'Echiquier (à Rouen)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1231">1231</date>
+                        <event>Assiste aux sessions de l'Echiquier (à Rouen)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1233">1233</date>
+                        <event>S'efforca de rétablir l'harmonie entre l'evêque et la commune de Laon
+                            (avec Renaud de Béronne)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1234">1234</date>
+                        <event>Assiste aux sessions de l'Echiquier (à Rouen)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1234">1234</date>
+                        <event>Est chargé, avec l'evêque de Chartres, d'estimer les terres à
+                            echanger entre le roi et Henri de Havaugour</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1234">septembre 1234</date>
+                        <event>Se porte caution d'un compatriote, Geoffroy Pocquaire de
+                            Beaume-la-Rolande, chevalier, en même temps que un autre personnage de
+                            la région, qui fut lui aussi bailli royal, Nicolas d'Auvilliers
+                            (Archives nationales, LL 1158, f° 27°)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1235">avril 1235</date>
+                        <event>Consenta à la donation des terres situées en plein coeur du Gâtinais
+                            par Thibaud de la Chapelle à l'abbaye de Saint-Denis (Archives
+                            nationales, S 2210 n° 20 et LL 1158 f° 27 v°)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1239">1239</date>
+                        <event>Siège à la court du roi</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1243">1243</date>
+                        <event>Siège à la court du roi</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1243">1243</date>
+                        <event>Est designé par le roi pour le représenter comme arbitre dans son
+                            différend avec Thibaud de Champagne au sujet de leurs domaines
+                            respectifs en Brie</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1244">1244</date>
+                        <event>Siège à la court du roi</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1245">1245</date>
+                        <event>Apaise un différend entre le bailli et l'evêque d'Orléans</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1245">1245</date>
+                        <event>Fonde un prieuré dans la localité de Briarres (Arch. dép. de Yonne, H
+                            448)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1246">1246</date>
+                        <event>Est présent aux sèances de l'Echiquier</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1248">1248</date>
+                        <event>Est présent aux sèances de l'Echiquier</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1250">février 1250</date>
+                        <event>Est présent au conseil du roi</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1251">1251 (ou environ)</date>
+                        <event>Cité dans un acte de pacification entre Hugues Tirel et les bourgeois
+                            de Poix en Picardie (voir Boutaric, Actes du Parlement de Paris, I, p.
+                            cccxviii)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1252">février et avril 1252</date>
+                        <event>Est présent au conseil de la reine Blanche, avec M. Eudes de Lorris,
+                            le doyen de Saint-Aignan d'Orlèans, de nombreux evêques, abbés et
+                            baillis parmi lesquels celui de Vermandois, Pierre de Fontaine (voir
+                            Archives nationales, JJ 26, f° 323 v°.</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1252">1252</date>
+                        <event>Est présent aux sèances de l'Echiquier</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1253">février 1253</date>
+                        <event>Préside le Parlement, ayant à ses cotês le bailli d'Orlèans, Jean Le
+                            Monoyer</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1254">mars 1254</date>
+                        <event>Est présent dans un jugement rendu aux assises de Evreux</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1257">novembre 1257</date>
+                        <event>Fait une donation à la commanderie de Beauvaisis près de Nemours
+                            (Archives nationales, S 5168, n° 23 - transcription dans Stein)</event>
+                    </chronItem>
+                </chronList>
+                <!-- autres informations disponibles, sans indication de date -->
+                <list>
+                    <item>Geoffroy de la Chapelle est fréquemment cité par Jonville dans les mêmes
+                        conditions que Jean de Beaumont.</item>
+                    <item>D'après Langlois (La vie en France au Moyen âge d'après quelques
+                        moralistes du temps, Paris 1908, p. 154) Geoffroy de la Chapelle est cité
+                        par Robert de Blois dans un manuscrit dedié à Hugues Tirel (la citation est
+                        reprise dans la contribution de Stein, p. 358).</item>
+                    <item>Il fit une donation au prieuré de Flotin, près de Boiscommun (Mémoires de
+                        la Société d'agriculture, sciences, belles-lettres et arts d'Orléans, XII,
+                        1869, p. 125)</item>
+                    <item>Il obtient du Chapitre cathédral de Sens l'utorisation de construire une
+                        chapelle en son domaine de La Grange, paroisse de Briarres-sur-Essonne
+                        (Arch. dép. de Yonne, G 1256 et G 120 n° 2; cf. Paul Quesvers et Henri
+                        Stein, Pouillé de l'ancien diocèse de Sens, 1894, p. 278)</item>
+                    <item>Bienfaiteur de l'abbaye de Froidmont en Beauvaisis (Arch. dép. de l'Oise,
+                        fonds de Froidmont; cf. Demay, Sceaux de Picardie, 1877, n° 223)</item>
+                    <item>Témoin dans une carte de l'abbaye de Tréport (Cartulaire de l'abbaye de
+                        Saint-Michel du Tréport, par P. Laffleur De Kermaingant, Paris, 1880, p.
+                        220)</item>
+                </list>
+            </biogHist>
+        </description>
+
+        <!-- Relations -->
+        <relations>
+            <cpfRelation cpfRelationType="family" xlink:type="simple" xlink:arcrole="parentOf"
+                xlink:href="http://purl.org/vocab/relationship/parentOf">
+                <relationEntry localType="père">Guillaume de La Chapelle</relationEntry>
+                <descriptiveNote>
+                    <p>Bailli d'Orlèans</p>
+                    <p>"Guillaume de la Chapelle" dans Recueil des historiens des Gaules et de la
+                        France, nouv. éd. publ. sous la dir. de M. Léopold Delisle, Paris,
+                        1840-1904, t. XXIV, p. 110</p>
+                </descriptiveNote>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="family" xlink:type="simple" xlink:arcrole="siblingOf"
+                xlink:href="http://purl.org/vocab/relationship/siblingOf">
+                <relationEntry>Thibaud de la Chapelle</relationEntry>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="family" xlink:type="simple" xlink:arcrole="siblingOf"
+                xlink:href="http://purl.org/vocab/relationship/siblingOf">
+                <relationEntry>Thierry de la Chapelle</relationEntry>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="family" xlink:type="simple" xlink:arcrole="childOf"
+                xlink:href="http://purl.org/vocab/relationship/childOf">
+                <relationEntry>Geoffroy II de la Chapelle</relationEntry>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="hierarchical" xlink:arcrole="employedBy"
+                xlink:href="http://purl.org/vocab/relationship/employedBy">
+                <relationEntry>Louis IX</relationEntry>
+            </cpfRelation>
+
+            <!-- Relation avec une ressource bibliographique, pour le moment renvoi à l'édition papier du LJP ; 
+                intégrer ensuite renvoi à l'édition XML/TEI sur ELEC  -->
+            <resourceRelation xlink:type="simple"
+                xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
+                <relationEntry>Li livres de jostice et de plet</relationEntry>
+            </resourceRelation>
+        </relations>
+
+    </cpfDescription>
+
+</eac-cpf>
