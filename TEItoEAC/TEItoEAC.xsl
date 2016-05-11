@@ -49,7 +49,7 @@
     <!-- exclu pour le moment les autres langues -->
     <xsl:template match="tei:listPerson/tei:person/tei:persName[@xml:lang = 'la']"/>
 
-    <!-- défini le nameEntry principal -->
+    <!-- dates, à preciser -->
     <xsl:template match="tei:listPerson/tei:person/tei:birth">
         <description>
             <existDates>
