@@ -27,6 +27,11 @@
             <recordID>
                 <xsl:value-of select="child::tei:fileDesc/tei:titleStmt/tei:title"/>
             </recordID>
+            <maintenanceAgency>
+                <agencyName>
+                    <xsl:value-of select="child::tei:fileDesc/tei:titleStmt/tei:principal/tei:affiliation"/>
+                </agencyName>
+            </maintenanceAgency>
             <xsl:apply-templates/>
         </control>
     </xsl:template>
@@ -37,8 +42,11 @@
             <maintenanceEvent>
                 <eventType>created by</eventType>
                 <agent>
-                    <xsl:value-of select="child::tei:principal"/>
+                    <xsl:value-of select="child::tei:principal/tei:persName"/>
                 </agent>
+                <eventDateTime>
+                    <xsl:value-of select="following-sibling::tei:publicationStmt/tei:date"/>
+                </eventDateTime>
             </maintenanceEvent>
             <maintenanceEvent>
                 <eventType>
@@ -50,7 +58,23 @@
             </maintenanceEvent>
         </maintenanceHistory>
     </xsl:template>
-
+    
+    <!-- exclude publicationStmt in this position -->
+    <xsl:template match="tei:teiHeader/tei:fileDesc/tei:publicationStmt"/>
+    
+    <!-- exclude seriesStmt in this position -->
+    <xsl:template match="tei:teiHeader/tei:fileDesc/tei:seriesStmt"/>
+    
+    <!-- sources / one source per paragraph -->
+    <xsl:template match="tei:teiHeader/tei:fileDesc/tei:sourceDesc">
+        <sources>
+        <xsl:for-each select="child::tei:p">
+            <source>
+               <xsl:value-of select="."/>
+            </source>
+        </xsl:for-each>
+        </sources>
+    </xsl:template>
 
 
 
