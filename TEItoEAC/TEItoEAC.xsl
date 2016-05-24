@@ -98,7 +98,7 @@
     <!-- excluding others languages -->
     <xsl:template match="tei:listPerson/tei:person/tei:persName[@xml:lang = 'la']"/>
 
-    <!-- range of dates -->
+    <!-- range of dates $ in progress -->
     <xsl:template match="tei:listPerson/tei:person/tei:birth">
         <description>
             <existDates>
