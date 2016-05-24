@@ -24,9 +24,34 @@
     <!-- ********************* templates for teiHeader *************************** -->
     <xsl:template match="tei:teiHeader">
         <control>
+            <recordID>
+                <xsl:value-of select="child::tei:fileDesc/tei:titleStmt/tei:title"/>
+            </recordID>
             <xsl:apply-templates/>
         </control>
     </xsl:template>
+
+    <!-- creation + enconding + date -->
+    <xsl:template match="tei:teiHeader/tei:fileDesc/tei:titleStmt">
+        <maintenanceHistory>
+            <maintenanceEvent>
+                <eventType>created by</eventType>
+                <agent>
+                    <xsl:value-of select="child::tei:principal"/>
+                </agent>
+            </maintenanceEvent>
+            <maintenanceEvent>
+                <eventType>
+                    <xsl:value-of select="child::tei:respStmt/tei:resp"/>
+                </eventType>
+                <agent>
+                    <xsl:value-of select="child::tei:respStmt/tei:persName"/>
+                </agent>
+            </maintenanceEvent>
+        </maintenanceHistory>
+    </xsl:template>
+
+
 
 
     <!-- ********************** templates for text ****************************** -->
@@ -36,7 +61,7 @@
         </cpfDescription>
     </xsl:template>
 
-    <!-- défini le nameEntry principal -->
+    <!-- principal nameEntry -->
     <xsl:template match="tei:listPerson/tei:person/tei:persName[@xml:lang = 'en']">
         <identity>
             <entityType>person</entityType>
@@ -45,11 +70,11 @@
             </nameEntry>
         </identity>
     </xsl:template>
-    
-    <!-- exclu pour le moment les autres langues -->
+
+    <!-- excluding others languages -->
     <xsl:template match="tei:listPerson/tei:person/tei:persName[@xml:lang = 'la']"/>
 
-    <!-- dates, à preciser -->
+    <!-- range of dates -->
     <xsl:template match="tei:listPerson/tei:person/tei:birth">
         <description>
             <existDates>
