@@ -50,6 +50,21 @@
                     Nouvelle revue historique de droit français et étranger, Paris, E. Tenin,
                     1918</sourceEntry>
             </source>
+            <source xlink:type="simple"
+                xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k9608165f/f673.image">
+                <sourceEntry>Emmanuel Lemaire, Archives anciennes de la ville de Saint-Quentin, t.
+                    I, 1888, 501</sourceEntry>
+            </source>
+            <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k501426">
+                <sourceEntry>Recueil des historiens des Gaules et de la France, éd. par Dom Martin
+                    Bouquet ; nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t. XXIV,
+                    Delisle, p. 119</sourceEntry>
+            </source>
+            <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k7270t">
+                <sourceEntry>Léon-Honoré Labande, Histoire de Beauvais et de ses institutions communales jusqu'au
+                    commencement du XVe siècle, 1892, p. 283-284 (reproduction en fac-similé, Genève 1978) 
+                </sourceEntry>
+            </source>
             <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
                 <!-- On a rapatrié ici des éléments provenant d'espaces de noms externes appropriés pour faire référence à des ressources 
                     bibliographiques -->
@@ -133,14 +148,50 @@
                     </chronItem>
                     <chronItem>
                         <date standardDate="1229">1229</date>
-                        <event>Il reconnait que l'Abbaye de Saint-Lucien de Beauvais lui a donné la
+                        <event>Il reconnait que l'abbaye de Saint-Lucien de Beauvais lui a donné la
                             jouissance sa vie durant des villages de Marseille et de Beaupuits
                             (Paris, BnF, fr. 31971 f. 38v, notes de Dom Villevieille)</event>
                     </chronItem>
                     <chronItem>
                         <date standardDate="1230">1230</date>
                         <event>Il est arbitre, avec Renaud de Bérone, dans un différend entre
-                            l'abbaye de Chaalis et Raoul de la Tournelle à propos des pâturages</event>
+                            l'abbaye de Chaalis et Raoul de la Tournelle à propos des pâturages
+                            (Paris, BnF, lat. 11003, f. 340v?)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1238">1238</date>
+                        <event>Il est arbitre dans un différend entre le comte de Penthièvre et la
+                            comtesse de Dreux (Paris, BnF, fr. 31971, d'après un cartulaire de
+                            Ponthieu)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1240">1240</date>
+                        <event>Il est commissaire délégué avec l'abbé de Saint-Corneille de
+                            Compiègne pour visiter un quartier vosin de l'église de Saint-Quentin et
+                            établir les bases d'un accord proposé par le chpitre de cette église au
+                            roi (Lemaire E., p. 501)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date notBefore="1240">1240</date>
+                        <event>Il enquête sur les droits respectifs du comte d'Artois et du comte de
+                            Ponthieu sur Authie, et il est present au jugement qui termine cette
+                            affaire avec Jean de Beumont, Geoffroy de la Chapelle, Jean Clément et
+                            Pierre Tristan.</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1241">1241</date>
+                        <event>Il offre une dîme à l'abbaye de Saint-Martin-aux-Bois pour le repos
+                            de son âme et de celui de ses ancêtres</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1242">1242</date>
+                        <event>Il concède des biens à l'abbaye de Froidmont en Beuvaisis (Cartulaire
+                            de l'abbaye de Froidmont, Archives dép. de l'Oise, t. I, p. 567)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1247">1247</date>
+                        <event>Il est présent au libellé d'une sentence rendue par le chapitre
+                            cathédral de Beuavaisis</event>
                     </chronItem>
                 </chronList>
             </biogHist>
@@ -150,15 +201,24 @@
         <relations>
             <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
                 xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
-                <relationEntry>Etienne de Sancerre</relationEntry>
-            </cpfRelation>
-            <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
-                xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
                 <relationEntry>Jean de Beaumont</relationEntry>
             </cpfRelation>
             <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
                 xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
                 <relationEntry>Renaud de Bérone</relationEntry>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
+                xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
+                <relationEntry>Etienne de Sancerre</relationEntry>
+            </cpfRelation>
+            <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
+                xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
+                <relationEntry>Pierre Tristan</relationEntry>
+                <descriptiveNote>
+                    <p>Stein Henri, Pierre Tristan, chambellan de Philippe-Auguste, et sa famille,
+                        Bibliothèque de l'école des chartes, 1917, t. 78. p. 135-153,
+                        www.persee.fr/doc/bec_0373-6237_1917_num_78_1_448595</p>
+                </descriptiveNote>
             </cpfRelation>
             <cpfRelation cpfRelationType="hierarchical" xlink:arcrole="employedBy"
                 xlink:href="http://purl.org/vocab/relationship/employedBy">
