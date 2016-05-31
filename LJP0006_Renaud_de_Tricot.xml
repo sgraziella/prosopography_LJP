@@ -55,15 +55,21 @@
                 <sourceEntry>Emmanuel Lemaire, Archives anciennes de la ville de Saint-Quentin, t.
                     I, 1888, 501</sourceEntry>
             </source>
+            <source xlink:type="simple"
+                xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k50141v/f695.image">
+                <sourceEntry>Recueil des historiens des Gaules et de la France, éd. par Dom Martin
+                    Bouquet ; nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t.
+                    XXIII, Delisle, p. 678</sourceEntry>
+            </source>
             <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k501426">
                 <sourceEntry>Recueil des historiens des Gaules et de la France, éd. par Dom Martin
                     Bouquet ; nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t. XXIV,
                     Delisle, p. 119</sourceEntry>
             </source>
             <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k7270t">
-                <sourceEntry>Léon-Honoré Labande, Histoire de Beauvais et de ses institutions communales jusqu'au
-                    commencement du XVe siècle, 1892, p. 283-284 (reproduction en fac-similé, Genève 1978) 
-                </sourceEntry>
+                <sourceEntry>Léon-Honoré Labande, Histoire de Beauvais et de ses institutions
+                    communales jusqu'au commencement du XVe siècle, 1892, p. 283-284 (reproduction
+                    en fac-similé, Genève 1978) </sourceEntry>
             </source>
             <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
                 <!-- On a rapatrié ici des éléments provenant d'espaces de noms externes appropriés pour faire référence à des ressources 
@@ -85,6 +91,20 @@
                 <descriptiveNote>
                     <p>Cité aux pages : ....</p>
                 </descriptiveNote>
+            </source>
+            
+            <!-- Sources non verifiées -->
+            <source>
+                <sourceEntry>Obituaire de Saint-Michel de Beauvais, Bibl. de la ville de Beauvais, ms. 3, fol. 237</sourceEntry>
+            </source>
+            <source>
+                <sourceEntry>Obituaire de Saint-Martial-aux-Bois, Archives dép. de l'Oise, II 193</sourceEntry>
+                <descriptiveNote>
+                    <p>Son nom figure à la date du 29 mars, il est qualifié de "fidelissimus amicus hujus ecclesie"</p>
+                </descriptiveNote>
+            </source>
+            <source>
+                <sourceEntry>Armoiries, Archives nationales, S 6263 (inventaire de 1681)</sourceEntry>
             </source>
         </sources>
     </control>
@@ -123,12 +143,22 @@
             <!-- Synthèse des fonctions principales -->
             <functions>
                 <function>
+                    <term>chevalier</term>
+                </function>
+                <function>
                     <term>bailli</term>
                     <placeEntry>Gisors</placeEntry>
                     <dateRange>
                         <fromDate notBefore="1235">1235</fromDate>
                         <toDate notAfter="1237">1237</toDate>
                     </dateRange>
+                </function>
+                <function>
+                    <term>Conseiller de Louis IX</term>
+                    <descriptiveNote>
+                        <p>Voir Lemaire, Archives anciennes de la ville de Saint-Quentin, t.
+                            I, 1888, p. 42</p>
+                    </descriptiveNote>
                 </function>
             </functions>
 
@@ -169,7 +199,7 @@
                         <event>Il est commissaire délégué avec l'abbé de Saint-Corneille de
                             Compiègne pour visiter un quartier vosin de l'église de Saint-Quentin et
                             établir les bases d'un accord proposé par le chpitre de cette église au
-                            roi (Lemaire E., p. 501)</event>
+                            roi (Lemaire, p. 501)</event>
                     </chronItem>
                     <chronItem>
                         <date notBefore="1240">1240</date>
@@ -189,9 +219,33 @@
                             de l'abbaye de Froidmont, Archives dép. de l'Oise, t. I, p. 567)</event>
                     </chronItem>
                     <chronItem>
+                        <date notBefore="1246">1246</date>
+                        <event>Il est témoin d'un engagement pris par le vicomte de Turenne
+                            (Historiens de France, t. XXIII, p. 678)</event>
+                    </chronItem>
+                    <chronItem>
                         <date standardDate="1247">1247</date>
                         <event>Il est présent au libellé d'une sentence rendue par le chapitre
-                            cathédral de Beuavaisis</event>
+                            cathédral de Beauvaisis (Labande, p. 283-284)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1250">1250</date>
+                        <event>Il siège à la court du roi (Boutarie, Actes du Parlement de Paris, t.
+                            I, p. CCCX)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1253">1253</date>
+                        <event>Avec un chanoine d'Arras, il est chargé d'une enquête tendant à
+                            demeler la verité dans un procès entre la comtesse Mahaut d'Artois et
+                            l'évequê d'Artois (Historiens de France, t. XXIV, p. 314)</event>
+                    </chronItem>
+                    <chronItem>
+                        <date standardDate="1257">1257 (?)</date>
+                        <event>Il échange contre un jardin un droit de cens que possédaient les
+                            religieux de Saint-Martin-aux-Bois sur une maison située à Ménévillers,
+                            près de Clermont, à l'expresse condition que ni Renaud, ni ses héritiers
+                            ni bâtiront ni maison ni forteresse (Archives nationales, S 6263 n°
+                            5)</event>
                     </chronItem>
                 </chronList>
             </biogHist>
@@ -199,6 +253,10 @@
 
         <!-- Relations -->
         <relations>
+            <cpfRelation cpfRelationType="family" xlink:arcrole="siblingOf"
+                xlink:href="http://purl.org/vocab/relationship/siblingOf">
+                <relationEntry>Gile, dame de Tricot châtelaine de Roye</relationEntry>
+            </cpfRelation>
             <cpfRelation cpfRelationType="associative" xlink:arcrole="collaboratesWith"
                 xlink:href="http://purl.org/vocab/relationship/collaboratesWith">
                 <relationEntry>Jean de Beaumont</relationEntry>
