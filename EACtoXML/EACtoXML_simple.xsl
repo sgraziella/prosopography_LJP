@@ -47,6 +47,9 @@
         <AGENT>
             <xsl:value-of select="descendant::eac:maintenanceEvent/eac:agent"/>
         </AGENT>
+        <EVENTDESCRIPTION>
+            <xsl:value-of select="descendant::eac:maintenanceEvent/eventDescription"/>
+        </EVENTDESCRIPTION>
     </xsl:template>
 
     <!-- subcolumn for sources -->
