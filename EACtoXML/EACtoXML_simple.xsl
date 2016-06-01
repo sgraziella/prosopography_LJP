@@ -83,7 +83,7 @@
 
     <xsl:template match="eac:identity/eac:nameEntry">
         <NAMEENTRY>
-            <xsl:value-of select="eac:part[@localType = 'prenom']"/>
+            <xsl:value-of select="eac:part[@localType = 'prénom']"/>
             <xsl:text> </xsl:text>
             <xsl:value-of select="eac:part[@localType = 'nom']"/>
         </NAMEENTRY>
@@ -114,7 +114,11 @@
 
     <xsl:template match="eac:biogHist">
         <BIOGHIST>
-            <xsl:value-of select="."/>
+            <xsl:for-each select="eac:chronList/eac:chronItem">
+                <CHRONITEM>
+                    <xsl:value-of select="."/>
+                </CHRONITEM>
+            </xsl:for-each>
         </BIOGHIST>
     </xsl:template>
 
