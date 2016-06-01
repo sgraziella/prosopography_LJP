@@ -26,9 +26,17 @@
         </RECORDID>
     </xsl:template>
 
-    <xsl:template match="eac:maintenanceStatus"/>
+    <xsl:template match="eac:maintenanceStatus">
+        <MAINTENANCESTATUS>
+            <xsl:value-of select="."/>
+        </MAINTENANCESTATUS>
+    </xsl:template>
 
-    <xsl:template match="eac:publicationStatus"/>
+    <xsl:template match="eac:publicationStatus">
+        <PUBLICATIONSTATUS>
+            <xsl:value-of select="."/>
+        </PUBLICATIONSTATUS>
+    </xsl:template>
 
     <xsl:template match="eac:agencyName">
         <AGENCYNAME>
@@ -36,9 +44,17 @@
         </AGENCYNAME>
     </xsl:template>
 
-    <xsl:template match="eac:languageDeclaration"/>
+    <xsl:template match="eac:languageDeclaration">
+        <LANGUAGEDECLARATION>
+            <xsl:value-of select="."/>
+        </LANGUAGEDECLARATION>
+    </xsl:template>
 
-    <xsl:template match="eac:conventionDeclaration"/>
+    <xsl:template match="eac:conventionDeclaration">
+        <CONVENTIONDECLARATION>
+            <xsl:value-of select="."/>
+        </CONVENTIONDECLARATION>
+    </xsl:template>
 
     <xsl:template match="eac:maintenanceHistory">
         <EVENTDATETIME>
@@ -111,13 +127,12 @@
                 <FUNCTION>
                     <xsl:choose>
                         <xsl:when test="string-length(eac:dateRange/eac:fromDate) != 0">
-                    <xsl:value-of select="eac:dateRange/eac:fromDate"/>
-                    <xsl:text>-</xsl:text>
-                    <xsl:value-of select="eac:dateRange/eac:toDate"/>
-                    <xsl:text>: </xsl:text>
+                            <xsl:value-of select="eac:dateRange/eac:fromDate"/>
+                            <xsl:text>-</xsl:text>
+                            <xsl:value-of select="eac:dateRange/eac:toDate"/>
+                            <xsl:text>: </xsl:text>
                         </xsl:when>
                     </xsl:choose>
-                    
                     <xsl:value-of select="eac:term"/>
                     <xsl:choose>
                         <xsl:when test="string-length(eac:placeEntry) != 0">
@@ -126,6 +141,7 @@
                             <xsl:text>)</xsl:text>
                         </xsl:when>
                     </xsl:choose>
+                    <xsl:value-of select="eac:descriptiveNote"/>
                 </FUNCTION>
             </xsl:for-each>
         </FUNCTIONS>
