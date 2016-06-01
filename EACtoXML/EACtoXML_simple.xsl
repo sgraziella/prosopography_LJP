@@ -66,8 +66,7 @@
                     <xsl:value-of
                         select="./*[namespace-uri() = 'http://www.tei-c.org/ns/1.0' and local-name() = 'author']"
                     />, <xsl:value-of
-                        select="./*[namespace-uri() = 'http://www.tei-c.org/ns/1.0' and local-name() = 'title']"
-                    />
+                        select="./*[namespace-uri() = 'http://www.tei-c.org/ns/1.0' and local-name() = 'title']"/>
                     <!-- à completer -->
                 </SOURCE>
             </xsl:for-each>
@@ -108,7 +107,27 @@
 
     <xsl:template match="eac:functions">
         <FUNCTIONS>
-            <xsl:value-of select="."/>
+            <xsl:for-each select="eac:function">
+                <FUNCTION>
+                    <xsl:choose>
+                        <xsl:when test="string-length(eac:dateRange/eac:fromDate) != 0">
+                    <xsl:value-of select="eac:dateRange/eac:fromDate"/>
+                    <xsl:text>-</xsl:text>
+                    <xsl:value-of select="eac:dateRange/eac:toDate"/>
+                    <xsl:text>: </xsl:text>
+                        </xsl:when>
+                    </xsl:choose>
+                    
+                    <xsl:value-of select="eac:term"/>
+                    <xsl:choose>
+                        <xsl:when test="string-length(eac:placeEntry) != 0">
+                            <xsl:text> (</xsl:text>
+                            <xsl:value-of select="eac:placeEntry"/>
+                            <xsl:text>)</xsl:text>
+                        </xsl:when>
+                    </xsl:choose>
+                </FUNCTION>
+            </xsl:for-each>
         </FUNCTIONS>
     </xsl:template>
 
