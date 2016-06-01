@@ -48,7 +48,7 @@
             <xsl:value-of select="descendant::eac:maintenanceEvent/eac:agent"/>
         </AGENT>
         <EVENTDESCRIPTION>
-            <xsl:value-of select="descendant::eac:maintenanceEvent/eventDescription"/>
+            <xsl:value-of select="descendant::eac:maintenanceEvent/eac:eventDescription"/>
         </EVENTDESCRIPTION>
     </xsl:template>
 
@@ -92,10 +92,10 @@
 
     <xsl:template match="eac:existDates">
         <EXISTFROMDATE>
-            <xsl:value-of select="eac:dateRange/eac:fromDate/@standardDate"/>
+            <xsl:value-of select="eac:dateRange/eac:fromDate"/>
         </EXISTFROMDATE>
         <EXISTTODATE>
-            <xsl:value-of select="eac:dateRange/eac:toDate/@standardDate"/>
+            <xsl:value-of select="eac:dateRange/eac:toDate"/>
         </EXISTTODATE>
     </xsl:template>
 
