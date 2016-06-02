@@ -39,7 +39,7 @@
                 <agentType>human</agentType>
                 <agent>Graziella Pastore (Ecole nationale des chartes - INRIA Alpage)</agent>
                 <eventDescription>Rédaction de la notice sur la base des informations fournies par
-                    H. Stein (Stein 1918); les informations extraites des ouvrages cités dans la
+                    H. Stein (Stein 1918). Les informations extraites des ouvrages cités dans la
                     section Sources ont été verifiées sur les originaux.</eventDescription>
             </maintenanceEvent>
         </maintenanceHistory>
@@ -58,8 +58,8 @@
             <source xlink:type="simple"
                 xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k50141v/f695.image">
                 <sourceEntry>Recueil des historiens des Gaules et de la France, éd. par Dom Martin
-                    Bouquet, nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t.
-                    XXIII, Delisle, p. 678</sourceEntry>
+                    Bouquet, nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t. XXIII,
+                    Delisle, p. 678</sourceEntry>
             </source>
             <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k501426">
                 <sourceEntry>Recueil des historiens des Gaules et de la France, éd. par Dom Martin
@@ -89,22 +89,27 @@
                 </objectXMLWrap>
                 <!-- à complèter -->
                 <descriptiveNote>
-                    <p>Figure dans "Li livres de jostice et de plet" aux pages/paragraphes : ....</p>
+                    <p>Figure dans "Li livres de jostice et de plet" aux pages/paragraphes :
+                        ....</p>
                 </descriptiveNote>
             </source>
-            
+
             <!-- Sources non verifiées -->
             <source>
-                <sourceEntry>Obituaire de Saint-Michel de Beauvais, Bibl. de la ville de Beauvais, ms. 3, fol. 237</sourceEntry>
+                <sourceEntry>Obituaire de Saint-Michel de Beauvais, Bibl. de la ville de Beauvais,
+                    ms. 3, fol. 237</sourceEntry>
             </source>
             <source>
-                <sourceEntry>Obituaire de Saint-Martial-aux-Bois, Archives dép. de l'Oise, II 193</sourceEntry>
+                <sourceEntry>Obituaire de Saint-Martial-aux-Bois, Archives dép. de l'Oise, II
+                    193</sourceEntry>
                 <descriptiveNote>
-                    <p>Son nom figure à la date du 29 mars, il est qualifié de "fidelissimus amicus hujus ecclesie"</p>
+                    <p>Son nom figure à la date du 29 mars, il est qualifié de "fidelissimus amicus
+                        hujus ecclesie"</p>
                 </descriptiveNote>
             </source>
             <source>
-                <sourceEntry>Armoiries, Archives nationales, S 6263 (inventaire de 1681)</sourceEntry>
+                <sourceEntry>Armoiries, Archives nationales, S 6263 (inventaire de
+                    1681)</sourceEntry>
             </source>
         </sources>
     </control>
@@ -136,10 +141,13 @@
             </existDates>
 
             <!-- à préciser si possible -->
-            <place>
-                <placeEntry>Comté de Clermont-en-Beuvaisis</placeEntry>
-            </place>
-
+            <places>
+                <place>
+                    <placeRole/>
+                    <placeEntry>Comté de Clermont-en-Beauvaisis</placeEntry>
+                </place>
+            </places>
+            
             <!-- Synthèse des fonctions principales -->
             <functions>
                 <function>
@@ -156,8 +164,8 @@
                 <function>
                     <term>Conseillier de Louis IX</term>
                     <descriptiveNote>
-                        <p>Voir Lemaire, Archives anciennes de la ville de Saint-Quentin, t.
-                            I, 1888, p. 42</p>
+                        <p>Voir Lemaire, Archives anciennes de la ville de Saint-Quentin, t. I,
+                            1888, p. 42</p>
                     </descriptiveNote>
                 </function>
             </functions>

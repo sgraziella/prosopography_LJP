@@ -122,10 +122,17 @@
         </EXISTTODATE>
     </xsl:template>
 
-    <xsl:template match="eac:place">
-        <PLACE>
-            <xsl:value-of select="."/>
-        </PLACE>
+    <xsl:template match="eac:places">
+        <PLACES>
+            <xsl:for-each select="eac:place">
+                <PLACE>
+                    <xsl:value-of select="eac:placeEntry"/>
+                    <xsl:text> (</xsl:text>
+                    <xsl:value-of select="eac:placeRole"/>
+                    <xsl:text>)</xsl:text>
+                </PLACE>
+            </xsl:for-each>
+        </PLACES>
     </xsl:template>
 
     <xsl:template match="eac:functions">
