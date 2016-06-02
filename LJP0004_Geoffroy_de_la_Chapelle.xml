@@ -39,7 +39,7 @@
                 <agentType>human</agentType>
                 <agent>Graziella Pastore (Ecole nationale des chartes - INRIA Alpage)</agent>
                 <eventDescription>Rédaction de la notice sur la base des informations fournies par
-                    H. Stein (Stein 1918); les informations extraites des ouvrages cités dans la
+                    H. Stein (Stein 1918). Les informations extraites des ouvrages cités dans la
                     section Sources ont été verifiées sur les originaux.</eventDescription>
             </maintenanceEvent>
         </maintenanceHistory>
@@ -123,7 +123,6 @@
             <nameEntry>
                 <part localType="nom">de la Chapelle</part>
                 <part localType="prénom">Geoffroy</part>
-                <authorizedForm>AFNOR_NF_Z_44-061</authorizedForm>
             </nameEntry>
         </identity>
         <description>
@@ -135,10 +134,16 @@
             </existDates>
 
             <!-- à préciser si possible -->
-            <place>
-                <placeEntry>La-Chapelle-la-Reine</placeEntry>
-                <placeEntry>Gâtinais</placeEntry>
-            </place>
+            <places>
+                <place>
+                    <placeRole/>
+                    <placeEntry>La-Chapelle-la-Reine</placeEntry>
+                </place>
+                <place>
+                    <placeRole/>
+                    <placeEntry>Gâtinais</placeEntry>
+                </place>
+            </places>
 
             <!-- Synthèse des fonctions principales; l'élément <term> ne peut pas contenir de phrases -->
             <functions>

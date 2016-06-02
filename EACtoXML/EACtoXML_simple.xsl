@@ -167,7 +167,13 @@
                             <xsl:text>)</xsl:text>
                         </xsl:when>
                     </xsl:choose>
-                    <xsl:value-of select="eac:descriptiveNote"/>
+                    <xsl:choose>
+                        <xsl:when test="string-length(eac:descriptiveNote) != 0">
+                            <xsl:text> (</xsl:text>
+                            <xsl:value-of select="eac:descriptiveNote"/>
+                            <xsl:text>)</xsl:text>
+                        </xsl:when>
+                    </xsl:choose>
                 </FUNCTION>
             </xsl:for-each>
         </FUNCTIONS>
@@ -185,7 +191,18 @@
 
     <xsl:template match="eac:relations">
         <RELATIONS>
-            <xsl:value-of select="."/>
+            <xsl:for-each select="eac:cpfRelation">
+                <CPFRELATION>
+                    <xsl:value-of select="eac:relationEntry"/>
+                    <xsl:choose>
+                        <xsl:when test="string-length(eac:descriptiveNote) != 0">
+                            <xsl:text> (</xsl:text>
+                            <xsl:value-of select="eac:descriptiveNote"/>
+                            <xsl:text>)</xsl:text>
+                        </xsl:when>
+                    </xsl:choose>
+                </CPFRELATION>
+            </xsl:for-each>
         </RELATIONS>
     </xsl:template>
 

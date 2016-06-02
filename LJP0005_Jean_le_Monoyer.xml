@@ -39,7 +39,7 @@
                 <agentType>human</agentType>
                 <agent>Graziella Pastore (Ecole nationale des chartes - INRIA Alpage)</agent>
                 <eventDescription>Rédaction de la notice sur la base des informations fournies par
-                    H. Stein (Stein 1918); les informations extraites des ouvrages cités dans la
+                    H. Stein (Stein 1918). Les informations extraites des ouvrages cités dans la
                     section Sources ont été verifiées sur les originaux.</eventDescription>
             </maintenanceEvent>
         </maintenanceHistory>
@@ -52,7 +52,7 @@
             </source>
             <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k501426">
                 <sourceEntry>Recueil des historiens des Gaules et de la France, éd. par Dom Martin
-                    Bouquet ; nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t. XXIV,
+                    Bouquet, nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t. XXIV,
                     Delisle, p. 46</sourceEntry>
             </source>
             <source xlink:type="simple"
@@ -78,7 +78,8 @@
                 </objectXMLWrap>
                 <!-- à complèter -->
                 <descriptiveNote>
-                    <p>Cité aux pages : ....</p>
+                    <p>Figure dans "Li livres de jostice et de plet" aux pages/paragraphes :
+                        ....</p>
                 </descriptiveNote>
             </source>
         </sources>
@@ -101,9 +102,12 @@
             </existDates>
 
             <!-- à préciser si possible -->
-            <place>
-                <placeEntry>Sens</placeEntry>
-            </place>
+            <places>
+                <place>
+                    <placeRole/>
+                    <placeEntry>Sens</placeEntry>
+                </place>
+            </places>
 
             <!-- Synthèse des fonctions principales -->
             <functions>
