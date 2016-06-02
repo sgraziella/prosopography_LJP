@@ -58,12 +58,12 @@
             <source xlink:type="simple"
                 xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k50141v/f695.image">
                 <sourceEntry>Recueil des historiens des Gaules et de la France, éd. par Dom Martin
-                    Bouquet ; nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t.
+                    Bouquet, nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t.
                     XXIII, Delisle, p. 678</sourceEntry>
             </source>
             <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k501426">
                 <sourceEntry>Recueil des historiens des Gaules et de la France, éd. par Dom Martin
-                    Bouquet ; nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t. XXIV,
+                    Bouquet, nouv. éd. publ. sous la dir. de M. Léopold, Paris, 1840-1904, t. XXIV,
                     Delisle, p. 119</sourceEntry>
             </source>
             <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k7270t">
@@ -89,7 +89,7 @@
                 </objectXMLWrap>
                 <!-- à complèter -->
                 <descriptiveNote>
-                    <p>Cité aux pages : ....</p>
+                    <p>Figure dans "Li livres de jostice et de plet" aux pages/paragraphes : ....</p>
                 </descriptiveNote>
             </source>
             
