@@ -135,9 +135,13 @@
             <xsl:for-each select="eac:place">
                 <PLACE>
                     <xsl:value-of select="eac:placeEntry"/>
-                    <xsl:text> (</xsl:text>
-                    <xsl:value-of select="eac:placeRole"/>
-                    <xsl:text>)</xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="string-length(eac:placeRole) != 0">
+                            <xsl:text> (</xsl:text>
+                            <xsl:value-of select="eac:placeRole"/>
+                            <xsl:text>)</xsl:text>
+                        </xsl:when>
+                    </xsl:choose>
                 </PLACE>
             </xsl:for-each>
         </PLACES>
