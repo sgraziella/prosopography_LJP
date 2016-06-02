@@ -104,14 +104,22 @@
     </xsl:template>
 
     <xsl:template match="eac:identity/eac:nameEntry">
-        <NAMEENTRY>
+        <NAMEENTRY_TITLE>
             <xsl:value-of select="eac:part[@localType = 'prénom']"/>
             <xsl:text> </xsl:text>
             <xsl:value-of select="eac:part[@localType = 'nom']"/>
-        </NAMEENTRY>
+        </NAMEENTRY_TITLE>
     </xsl:template>
 
-    <xsl:template match="eac:nameEntryParallel"/>
+    <xsl:template match="eac:nameEntryParallel">
+        <NAMEENTRYPARALLEL>
+            <xsl:for-each select="eac:nameEntry">
+                <NAMEENTRY>
+                    <xsl:value-of select="."/>
+                </NAMEENTRY>
+            </xsl:for-each>
+        </NAMEENTRYPARALLEL>
+    </xsl:template>
 
     <xsl:template match="eac:existDates">
         <EXISTFROMDATE>
