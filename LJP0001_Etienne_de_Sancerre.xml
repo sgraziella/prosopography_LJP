@@ -86,7 +86,7 @@
             <!-- Forme autorisée du nom structurée dans différents éléments <part> permettant de distinguer la nature de chaque composante du nom -->
             <nameEntry>
                 <part localType="nom">de Sancerre</part>
-                <part localType="prenom">Etienne</part>
+                <part localType="prénom">Etienne</part>
             </nameEntry>
             <nameEntryParallel>
                 <nameEntry>
