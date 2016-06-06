@@ -100,8 +100,7 @@
    
     <!-- **************** Templates for cpfDescription ******************* -->
     
-    <!-- dc-subjet for Catalog Search plugin -->
-
+    <!-- dc-subject for Catalog Search plugin -->
     <xsl:template name="dcsubject" match="eac:identity/eac:nameEntry" mode="copy">
         <DCSUBJECT>
             <xsl:value-of select="eac:part[@localType = 'prénom']"/>
@@ -109,6 +108,7 @@
             <xsl:value-of select="eac:part[@localType = 'nom']"/>
         </DCSUBJECT>
     </xsl:template>
+    
     
     <xsl:template match="eac:entityType">
         <ENTITYTYPE>
