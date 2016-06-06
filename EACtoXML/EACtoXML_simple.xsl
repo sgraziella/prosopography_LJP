@@ -11,10 +11,11 @@
     xmlns:eac="urn:isbn:1-931666-33-4" exclude-result-prefixes="xs xlink eac" version="1.0">
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-
+    
     <xsl:template match="/">
         <AUTORITYFILE>
             <PERSON>
+                <xsl:apply-templates select="eac:eac-cpf/eac:cpfDescription/eac:identity/eac:nameEntry" mode="copy"/>
                 <xsl:apply-templates/>
             </PERSON>
         </AUTORITYFILE>
@@ -95,15 +96,27 @@
             <xsl:value-of select="eac:source/eac:descriptiveNote/eac:p"/>
         </DESCRIPTIVENOTE>
     </xsl:template>
+   
+   
+    <!-- **************** Templates for cpfDescription ******************* -->
+    
+    <!-- dc-subjet for Catalog Search plugin -->
 
-    <!-- ****** Templates for cpfDescription ****** -->
+    <xsl:template name="dcsubject" match="eac:identity/eac:nameEntry" mode="copy">
+        <DCSUBJECT>
+            <xsl:value-of select="eac:part[@localType = 'prénom']"/>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="eac:part[@localType = 'nom']"/>
+        </DCSUBJECT>
+    </xsl:template>
+    
     <xsl:template match="eac:entityType">
         <ENTITYTYPE>
             <xsl:value-of select="."/>
         </ENTITYTYPE>
     </xsl:template>
 
-    <xsl:template match="eac:identity/eac:nameEntry">
+    <xsl:template name="nameEntry" match="eac:identity/eac:nameEntry">
         <NAMEENTRY_TITLE>
             <xsl:value-of select="eac:part[@localType = 'prénom']"/>
             <xsl:text> </xsl:text>
