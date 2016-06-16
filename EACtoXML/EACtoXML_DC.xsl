@@ -13,34 +13,74 @@
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
-    <!-- Dublin Core basic set-->
+
+    <!-- ************** Dublin Core basic set **************** -->
+    <xsl:attribute-set name="dc-contributor">
+        <!-- dc:contributor : An entity responsible for making contributions to the resource -->
+        <xsl:attribute name="dc:contributor">contributor</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="dc-coverage">
+        <!-- dc:coverage : The spatial or temporal topic of the resource, the spatial applicability of the resource, 
+            or the jurisdiction under which the resource is relevant -->
+        <xsl:attribute name="dc:coverage">coverage</xsl:attribute>
+    </xsl:attribute-set>
     <xsl:attribute-set name="dc-creator">
+        <!-- dc:creator : An entity primarily responsible for making the resource -->
         <xsl:attribute name="dc:type">creator</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-date">
+        <!-- dc:date : A point or period of time associated with an event in the lifecycle of the resource -->
         <xsl:attribute name="dc:type">date</xsl:attribute>
     </xsl:attribute-set>
+    <xsl:attribute-set name="dc-description">
+        <!-- dc:description : An account of the resource -->
+        <xsl:attribute name="dc:description">description</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="dc-format">
+        <!-- dc:format : The file format, physical medium, or dimensions of the resource -->
+        <xsl:attribute name="dc:format">format</xsl:attribute>
+    </xsl:attribute-set>
     <xsl:attribute-set name="dc-identifier">
+        <!-- dc:identifier : An unambiguous reference to the resource within a given context -->
         <xsl:attribute name="dc:type">identifier</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-language">
+        <!-- dc: language : A language of the resource -->
         <xsl:attribute name="dc:type">language</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-publisher">
+        <!-- dc:publisher : An entity responsible for making the resource available -->
         <xsl:attribute name="dc:type">publisher</xsl:attribute>
     </xsl:attribute-set>
+    <xsl:attribute-set name="dc-relation">
+        <!-- dc:relation : A related resource -->
+        <xsl:attribute name="dc:relation">relation</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="dc:rights">
+        <!-- dc:rights : Information about rights held in and over the resource -->
+        <xsl:attribute name="rights">rights</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="dc-source">
+        <!-- dc:source : A related resource from which the described resource is derived -->
+        <xsl:attribute name="dc:source">source</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="dc-subject">
+        <!-- dc:subject : The topic of the resource -->
+        <xsl:attribute name="dc:subject"/>
+    </xsl:attribute-set>
     <xsl:attribute-set name="dc-title">
+        <!-- dc:title : A name given to the resource -->
         <xsl:attribute name="dc:type">title</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-type">
+        <!-- dc:type : The nature or genre of the resource -->
         <xsl:attribute name="dc:type">type</xsl:attribute>
     </xsl:attribute-set>
-    <xsl:attribute-set name="dc-subject">
-        <xsl:attribute name="dc:type">subject</xsl:attribute>
-    </xsl:attribute-set>
 
 
-    <!-- main template -->
+
+
+    <!-- ************* main template ************************** -->
     <xsl:template match="/">
         <AUTORITYFILE>
             <PERSON>
@@ -96,7 +136,7 @@
         <AGENT xsl:use-attribute-sets="dc-creator">
             <xsl:value-of select="descendant::eac:maintenanceEvent/eac:agent"/>
         </AGENT>
-        <EVENTDESCRIPTION>
+        <EVENTDESCRIPTION xsl:use-attribute-sets="dc-description">
             <xsl:value-of select="descendant::eac:maintenanceEvent/eac:eventDescription"/>
         </EVENTDESCRIPTION>
     </xsl:template>
