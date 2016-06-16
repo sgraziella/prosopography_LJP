@@ -205,12 +205,21 @@
     </xsl:template>
 
     <xsl:template match="eac:existDates">
-        <EXISTFROMDATE>
+        <!-- Summary: The dates of existence of the entity being described, 
+            such as dates of establishment and dissolution for corporate bodies and dates of birth and death or flourit for persons  -->
+        <EXISTDATE>
+            <xsl:text>From: </xsl:text>
             <xsl:value-of select="eac:dateRange/eac:fromDate"/>
-        </EXISTFROMDATE>
-        <EXISTTODATE>
+            <xsl:text> To: </xsl:text>
             <xsl:value-of select="eac:dateRange/eac:toDate"/>
-        </EXISTTODATE>
+            <xsl:choose>
+                <xsl:when test="string-length(eac:descriptiveNote) != 0">
+                    <xsl:text> (</xsl:text>
+                    <xsl:value-of select="descendant::eac:descriptiveNote"/>
+                    <xsl:text>)</xsl:text>
+                </xsl:when>
+            </xsl:choose>
+        </EXISTDATE>
     </xsl:template>
 
     <xsl:template match="eac:places">

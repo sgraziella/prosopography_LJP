@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--@sgraziella https://github.com/sgraziella/prosopography_LJP
     @licence Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
-    Really basic transformation from EAC-CPF to XML in order to add an intermediate stylesheet
+    Basic transformation from EAC-CPF to a flat XML in order to add an intermediate stylesheet
     on XMLImport Omeka plugin https://github.com/Daniel-KM/XmlImport 
     Case 1 : entityType = person 
     version 0.1 -->
@@ -11,11 +11,12 @@
     xmlns:eac="urn:isbn:1-931666-33-4" exclude-result-prefixes="xs xlink eac" version="1.0">
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-    
+
     <xsl:template match="/">
         <AUTORITYFILE>
             <PERSON>
-                <xsl:apply-templates select="eac:eac-cpf/eac:cpfDescription/eac:identity/eac:nameEntry" mode="copy"/>
+                <xsl:apply-templates
+                    select="eac:eac-cpf/eac:cpfDescription/eac:identity/eac:nameEntry" mode="copy"/>
                 <xsl:apply-templates/>
             </PERSON>
         </AUTORITYFILE>
@@ -96,10 +97,10 @@
             <xsl:value-of select="eac:source/eac:descriptiveNote/eac:p"/>
         </DESCRIPTIVENOTE>
     </xsl:template>
-   
-   
+
+
     <!-- **************** Templates for cpfDescription ******************* -->
-    
+
     <!-- dc-subject for Catalog Search plugin -->
     <xsl:template name="dcsubject" match="eac:identity/eac:nameEntry" mode="copy">
         <DCSUBJECT>
@@ -108,8 +109,8 @@
             <xsl:value-of select="eac:part[@localType = 'nom']"/>
         </DCSUBJECT>
     </xsl:template>
-    
-    
+
+
     <xsl:template match="eac:entityType">
         <ENTITYTYPE>
             <xsl:value-of select="."/>
@@ -135,12 +136,21 @@
     </xsl:template>
 
     <xsl:template match="eac:existDates">
-        <EXISTFROMDATE>
+        <!-- Summary: The dates of existence of the entity being described, 
+            such as dates of establishment and dissolution for corporate bodies and dates of birth and death or flourit for persons  -->
+        <EXISTDATE>
+            <xsl:text>From: </xsl:text>
             <xsl:value-of select="eac:dateRange/eac:fromDate"/>
-        </EXISTFROMDATE>
-        <EXISTTODATE>
+            <xsl:text> To: </xsl:text>
             <xsl:value-of select="eac:dateRange/eac:toDate"/>
-        </EXISTTODATE>
+            <xsl:choose>
+                <xsl:when test="string-length(eac:descriptiveNote) != 0">
+                    <xsl:text> (</xsl:text>
+                    <xsl:value-of select="descendant::eac:descriptiveNote"/>
+                    <xsl:text>)</xsl:text>
+                </xsl:when>
+            </xsl:choose>
+        </EXISTDATE>
     </xsl:template>
 
     <xsl:template match="eac:places">
