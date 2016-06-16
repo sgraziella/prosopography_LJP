@@ -223,6 +223,7 @@
     </xsl:template>
 
     <xsl:template match="eac:places">
+        <!-- Summary: A grouping element used to bundle together individual <place> elements -->
         <PLACES>
             <xsl:for-each select="eac:place">
                 <PLACE>
