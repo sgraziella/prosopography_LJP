@@ -34,11 +34,11 @@
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-description">
         <!-- dc:description : An account of the resource -->
-        <xsl:attribute name="dc:description">description</xsl:attribute>
+        <xsl:attribute name="dc:type">description</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-format">
         <!-- dc:format : The file format, physical medium, or dimensions of the resource -->
-        <xsl:attribute name="dc:format">format</xsl:attribute>
+        <xsl:attribute name="dc:type">format</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-identifier">
         <!-- dc:identifier : An unambiguous reference to the resource within a given context -->
@@ -54,19 +54,19 @@
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-relation">
         <!-- dc:relation : A related resource -->
-        <xsl:attribute name="dc:relation">relation</xsl:attribute>
+        <xsl:attribute name="dc:type">relation</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="dc:rights">
         <!-- dc:rights : Information about rights held in and over the resource -->
-        <xsl:attribute name="rights">rights</xsl:attribute>
+        <xsl:attribute name="type">rights</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-source">
         <!-- dc:source : A related resource from which the described resource is derived -->
-        <xsl:attribute name="dc:source">source</xsl:attribute>
+        <xsl:attribute name="dc:type">source</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-subject">
         <!-- dc:subject : The topic of the resource -->
-        <xsl:attribute name="dc:subject"/>
+        <xsl:attribute name="dc:type">subject</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="dc-title">
         <!-- dc:title : A name given to the resource -->
