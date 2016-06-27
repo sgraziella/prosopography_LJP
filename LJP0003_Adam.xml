@@ -157,9 +157,11 @@ identités officielles) qui font chacune l’objet de descriptions différencié
                         <toDate notAfter="1235">1235</toDate>
                     </dateRange>
                 </existDates>
-                <place>
-                    <placeEntry>Gâtinais</placeEntry>
-                </place>
+                <places>
+                    <place>
+                        <placeEntry>Gâtinais</placeEntry>
+                    </place>
+                </places>
                 <!-- Synthèse des fonctions principales; l'élément <term> ne peut pas contenir de phrases -->
                 <functions>
                     <function>
@@ -207,9 +209,11 @@ identités officielles) qui font chacune l’objet de descriptions différencié
                         <toDate notAfter="1235">1235</toDate>
                     </dateRange>
                 </existDates>
-                <place>
-                    <placeEntry>Gâtinais</placeEntry>
-                </place>
+                <places>
+                    <place>
+                        <placeEntry>Gâtinais</placeEntry>
+                    </place>
+                </places>
                 <!-- Synthèse des fonctions principales -->
                 <functions>
                     <function>

@@ -208,16 +208,26 @@
         <!-- Summary: The dates of existence of the entity being described, 
             such as dates of establishment and dissolution for corporate bodies and dates of birth and death or flourit for persons  -->
         <EXISTDATE>
-            <xsl:text>From: </xsl:text>
-            <xsl:value-of select="eac:dateRange/eac:fromDate"/>
-            <xsl:text> To: </xsl:text>
-            <xsl:value-of select="eac:dateRange/eac:toDate"/>
             <xsl:choose>
+                <xsl:when test="string-length(eac:dateRange/eac:fromDate) != 0">
+                    <xsl:text>From: </xsl:text>
+                    <xsl:value-of select="eac:dateRange/eac:fromDate"/>
+                    <xsl:text>-</xsl:text>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:choose>
+                <xsl:when test="string-length(eac:dateRange/eac:toDate) != 0">
+                    <xsl:text>To: </xsl:text>
+                    <xsl:value-of select="eac:dateRange/eac:toDate"/>
+                </xsl:when>
                 <xsl:when test="string-length(eac:descriptiveNote) != 0">
                     <xsl:text> (</xsl:text>
                     <xsl:value-of select="descendant::eac:descriptiveNote"/>
                     <xsl:text>)</xsl:text>
                 </xsl:when>
+                <xsl:otherwise>
+                    <xsl:text> ? </xsl:text>
+                </xsl:otherwise>
             </xsl:choose>
         </EXISTDATE>
     </xsl:template>
