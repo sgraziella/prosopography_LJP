@@ -12,6 +12,15 @@
     exclude-result-prefixes="xs xlink eac dc" version="1.0">
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
+    
+    <!-- To define the elements for which white space should be removed -->
+    <xsl:strip-space elements="eac:control eac:cpfDescription" xml:space="default"/>
+
+    <!-- To create a newline -->
+    <xsl:variable name="newline">
+        <xsl:text>
+        </xsl:text>
+    </xsl:variable>
 
 
     <!-- ************** Dublin Core basic set **************** -->
@@ -277,6 +286,8 @@
                             <xsl:text>)</xsl:text>
                         </xsl:when>
                     </xsl:choose>
+                    <!-- a new line after each function -->
+                    <xsl:value-of select="$newline"/>
                 </FUNCTION>
             </xsl:for-each>
         </FUNCTIONS>
