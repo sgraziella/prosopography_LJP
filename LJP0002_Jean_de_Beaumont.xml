@@ -179,6 +179,7 @@
             </functions>
 
             <biogHist>
+                <abstract/>
                 <!-- Biographie présentée ici sous forme d'une liste chronologique  -->
                 <chronList>
                     <chronItem>

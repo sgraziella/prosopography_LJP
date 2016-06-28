@@ -4,7 +4,7 @@
     Basic transformation from EAC-CPF to XML in order to add an intermediate stylesheet
     on XMLImport Omeka plugin https://github.com/Daniel-KM/XmlImport
     with attribute-set for Dublin Core
-    version 0.1-dc -->
+    version 0.2-dc -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -12,7 +12,7 @@
     exclude-result-prefixes="xs xlink eac dc" version="1.0">
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-    
+
     <!-- To define the elements for which white space should be removed -->
     <xsl:strip-space elements="eac:control eac:cpfDescription" xml:space="default"/>
 
@@ -88,7 +88,6 @@
 
 
 
-
     <!-- ************* main template ************************** -->
     <xsl:template match="/">
         <AUTORITYFILE>
@@ -150,7 +149,7 @@
         </EVENTDESCRIPTION>
     </xsl:template>
 
-    <!-- subcolumn for sources -->
+    <!-- subcolumns for sources -->
     <xsl:template match="eac:sources">
         <SOURCES>
             <xsl:for-each select="descendant::eac:source">
@@ -158,6 +157,7 @@
                     <xsl:value-of select="eac:sourceEntry"/>
                 </SOURCE>
             </xsl:for-each>
+            <!-- XML schema and namespace attribute in case of <tei:bibl> source -->
             <xsl:for-each
                 select="descendant::eac:source/eac:objectXMLWrap/*[namespace-uri() = 'http://www.tei-c.org/ns/1.0' and local-name() = 'bibl']">
                 <SOURCE>
@@ -179,7 +179,7 @@
 
     <!-- **************** Templates for cpfDescription ******************* -->
 
-    <!-- dc-subject for Catalog Search plugin -->
+    <!-- dc-subject : display nameEntry as a copy in order to map the subject for Catalog Search plugin -->
     <xsl:template name="dcsubject" match="eac:identity/eac:nameEntry" mode="copy">
         <DCSUBJECT xsl:use-attribute-sets="dc-subject">
             <xsl:value-of select="eac:part[@localType = 'prénom']"/>
@@ -260,6 +260,7 @@
     </xsl:template>
 
     <xsl:template match="eac:functions">
+        <!-- Summary: A grouping element used to bundle together individual <function> elements  -->
         <FUNCTIONS>
             <xsl:for-each select="eac:function">
                 <FUNCTION>
@@ -286,7 +287,7 @@
                             <xsl:text>)</xsl:text>
                         </xsl:when>
                     </xsl:choose>
-                    <!-- a new line after each function -->
+                    <!-- add a new line after each function -->
                     <xsl:value-of select="$newline"/>
                 </FUNCTION>
             </xsl:for-each>
@@ -294,7 +295,12 @@
     </xsl:template>
 
     <xsl:template match="eac:biogHist">
+        <!-- Summary: A concise essay and/or chronology that provides biographical or historical information about the EAC-CPF entity -->
         <BIOGHIST>
+            <ABSTRACT>
+                <xsl:value-of select="eac:abstract"/>
+            </ABSTRACT>
+            <!-- items from chronlist -->
             <xsl:for-each select="eac:chronList/eac:chronItem">
                 <CHRONITEM>
                     <xsl:value-of select="."/>
@@ -304,6 +310,7 @@
     </xsl:template>
 
     <xsl:template match="eac:relations">
+        <!-- Summary: A wrapper element for grouping one or more specific relations -->
         <RELATIONS>
             <xsl:for-each select="eac:cpfRelation">
                 <CPFRELATION>
