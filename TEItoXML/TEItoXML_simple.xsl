@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--@sgraziella https://github.com/sgraziella/prosopography_LJP
     @licence Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
-    Really basic transformation from for TEI person (listPerson) in to a flat XML 
+    Really basic transformation from TEI persName (listPerson) into a flat XML 
     Could be used in order to add an intermediate stylesheet on XMLImport Omeka plugin https://github.com/Daniel-KM/XmlImport 
     version 0.1 -->
 
@@ -10,6 +10,9 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" exclude-result-prefixes="xs xlink tei" version="1.0">
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
+    
+    <!-- To define the elements for which white space should be removed -->
+    <xsl:strip-space elements="tei:teiHeader tei:text" xml:space="default"/>
 
     <!-- main template -->
     <xsl:template match="/">
@@ -85,7 +88,7 @@
 
 
     <!-- ******************     templates for text (listPerson)     ************************ -->
-    <xsl:template match="tei:text/tei:body/tei:listPerson">
+    <xsl:template name="person" match="tei:text/tei:body/tei:listPerson">
         <xsl:for-each select="child::tei:person">
             <NAMEENTRY_TITLE>
                 <xsl:value-of select="child::tei:persName"/>
