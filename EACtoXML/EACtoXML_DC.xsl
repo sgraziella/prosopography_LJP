@@ -153,7 +153,8 @@
     <xsl:template match="eac:sources">
         <SOURCES>
             <xsl:for-each select="eac:source">
-                <SOURCE>          
+                <SOURCE>
+                    <!-- Print the URI pointing to the related resource -->
                     <xsl:choose>
                         <xsl:when test="string-length(eac:sourceEntry) != 0">
                             <xsl:value-of select="eac:sourceEntry"/>
@@ -330,6 +331,14 @@
                             <xsl:text> (</xsl:text>
                             <xsl:value-of select="eac:descriptiveNote"/>
                             <xsl:text>)</xsl:text>
+                        </xsl:when>
+                    </xsl:choose>
+                    <!-- Print the URI defining the purpose of the link -->
+                    <xsl:choose>
+                        <xsl:when test="string-length(./@*[namespace-uri()='http://www.w3.org/1999/xlink' and local-name()='arcrole']) != 0">
+                            <xsl:text> [xlink:arcrole=</xsl:text>
+                            <xsl:value-of select="./@*[namespace-uri()='http://www.w3.org/1999/xlink' and local-name()='arcrole']"/>
+                            <xsl:text>]</xsl:text>
                         </xsl:when>
                     </xsl:choose>
                 </CPFRELATION>
