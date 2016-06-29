@@ -179,8 +179,13 @@
                 </SOURCE>
             </xsl:for-each>
         </SOURCES>
+        <!-- An arbitrary field containing the occurrences of the entity into the edition text -->
         <DESCRIPTIVENOTE>
-            <xsl:value-of select="eac:source/eac:descriptiveNote/eac:p"/>
+            <xsl:choose>
+                <xsl:when test="./eac:source/@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id'] = 'edition'">
+                    <xsl:value-of select="eac:source/eac:descriptiveNote/eac:p"/>
+                </xsl:when>
+            </xsl:choose>
         </DESCRIPTIVENOTE>
     </xsl:template>
     
@@ -281,6 +286,12 @@
                             <xsl:text>: </xsl:text>
                         </xsl:when>
                     </xsl:choose>
+                    <xsl:choose>
+                        <xsl:when test="string-length(eac:dateRange/eac:date) != 0">
+                            <xsl:value-of select="eac:dateRange/eac:date"/>
+                            <xsl:text>: </xsl:text>
+                        </xsl:when>
+                    </xsl:choose>
                     <xsl:value-of select="eac:term"/>
                     <xsl:choose>
                         <xsl:when test="string-length(eac:placeEntry) != 0">
@@ -296,6 +307,7 @@
                             <xsl:text>)</xsl:text>
                         </xsl:when>
                     </xsl:choose>
+                    <xsl:value-of select="eac:citation"/>
                     <!-- add a new line after each function -->
                     <xsl:value-of select="$newline"/>
                 </FUNCTION>
