@@ -96,7 +96,7 @@
                 <sourceEntry>Le Nain de Tillemont, Vie de saint Louis, roi de France, Paris, 1848, t. II, p. 146, 495</sourceEntry>
                 le renvoi de Stein ne correspond pas à la source
             </source>-->
-            <source xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
+            <source xml:id="ljp" xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
                 <!-- On a rapatrié ici des éléments provenant d'espaces de noms externes appropriés pour faire référence à des ressources 
                     bibliographiques -->
                 <objectXMLWrap>

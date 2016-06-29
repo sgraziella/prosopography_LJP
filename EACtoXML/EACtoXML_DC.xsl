@@ -183,6 +183,7 @@
             <xsl:value-of select="eac:source/eac:descriptiveNote/eac:p"/>
         </DESCRIPTIVENOTE>
     </xsl:template>
+    
 
 
     <!-- **************** Templates for cpfDescription ******************* -->
