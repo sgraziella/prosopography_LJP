@@ -318,9 +318,12 @@
     <xsl:template match="eac:biogHist">
         <!-- Summary: A concise essay and/or chronology that provides biographical or historical information about the EAC-CPF entity -->
         <BIOGHIST>
-            <ABSTRACT>
+            <BIOABSTRACT>
                 <xsl:value-of select="eac:abstract"/>
-            </ABSTRACT>
+            </BIOABSTRACT>
+            <BIOCITATION>
+                <xsl:value-of select="eac:citation"/>
+            </BIOCITATION>
             <!-- items from chronlist -->
             <xsl:for-each select="eac:chronList/eac:chronItem">
                 <CHRONITEM>
