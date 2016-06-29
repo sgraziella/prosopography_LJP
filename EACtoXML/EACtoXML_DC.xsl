@@ -88,7 +88,7 @@
 
 
 
-    <!-- ************* main template ************************** -->
+    <!-- ************* MAIN TEMPLATE ************************** -->
     <xsl:template match="/">
         <AUTORITYFILE>
             <PERSON>
@@ -310,7 +310,10 @@
             <!-- items from chronlist -->
             <xsl:for-each select="eac:chronList/eac:chronItem">
                 <CHRONITEM>
-                    <xsl:value-of select="."/>
+                    <xsl:value-of select="eac:dateRange"/>
+                    <xsl:value-of select="eac:date"/>
+                    <xsl:text> - </xsl:text>
+                    <xsl:value-of select="eac:event"/>
                 </CHRONITEM>
             </xsl:for-each>
         </BIOGHIST>
