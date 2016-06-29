@@ -149,12 +149,19 @@
         </EVENTDESCRIPTION>
     </xsl:template>
 
-    <!-- subcolumns for sources -->
+    <!-- subcolumns for sources; ark citation -->
     <xsl:template match="eac:sources">
         <SOURCES>
-            <xsl:for-each select="descendant::eac:source">
-                <SOURCE>
-                    <xsl:value-of select="eac:sourceEntry"/>
+            <xsl:for-each select="eac:source">
+                <SOURCE>          
+                    <xsl:choose>
+                        <xsl:when test="string-length(eac:sourceEntry) != 0">
+                            <xsl:value-of select="eac:sourceEntry"/>
+                            <xsl:text> (</xsl:text>
+                            <xsl:value-of select="./@*[namespace-uri()='http://www.w3.org/1999/xlink' and local-name()='href']"/>
+                            <xsl:text>)</xsl:text>
+                        </xsl:when>
+                    </xsl:choose>                 
                 </SOURCE>
             </xsl:for-each>
             <!-- XML schema and namespace attribute in case of <tei:bibl> source -->
