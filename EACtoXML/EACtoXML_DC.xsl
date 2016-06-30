@@ -149,7 +149,7 @@
         </EVENTDESCRIPTION>
     </xsl:template>
 
-    <!-- subcolumns for sources; ark citation -->
+    <!-- subcolumns for sources; containing ark citation -->
     <xsl:template match="eac:sources">
         <SOURCES>
             <xsl:for-each select="eac:source">
@@ -282,6 +282,7 @@
         <FUNCTIONS>
             <xsl:for-each select="eac:function">
                 <FUNCTION>
+                    <xsl:text>- </xsl:text>
                     <xsl:choose>
                         <xsl:when test="string-length(eac:dateRange/eac:fromDate) != 0">
                             <xsl:value-of select="eac:dateRange/eac:fromDate"/>
