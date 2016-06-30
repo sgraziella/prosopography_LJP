@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--@sgraziella https://github.com/sgraziella/prosopography_LJP
-    @licence Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+    @licence Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
     Really basic transformation from TEI <person> into a flat XML 
     Could be used in order to add an intermediate stylesheet on XMLImport Omeka plugin https://github.com/Daniel-KM/XmlImport   
     Tranformation for one <person> version 0.1 -->

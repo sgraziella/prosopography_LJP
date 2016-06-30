@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- @sgraziella https://github.com/sgraziella/prosopography_LJP
+    @licence Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
     Draft for basic transformation from TEI person to EAC-CPF
     Could be used in order to add a pre-intermediate stylesheet on XMLImport Omeka plugin
     *** person ****
