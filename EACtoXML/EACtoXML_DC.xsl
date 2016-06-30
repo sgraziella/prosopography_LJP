@@ -127,7 +127,7 @@
 
     <xsl:template match="eac:languageDeclaration">
         <LANGUAGEDECLARATION xsl:use-attribute-sets="dc-language">
-            <xsl:value-of select="."/>
+            <xsl:value-of select="eac:language"/>
         </LANGUAGEDECLARATION>
     </xsl:template>
 
@@ -229,7 +229,9 @@
 
     <xsl:template match="eac:existDates">
         <!-- Summary: The dates of existence of the entity being described, 
-            such as dates of establishment and dissolution for corporate bodies and dates of birth and death or flourit for persons  -->
+            such as dates of establishment and dissolution for corporate bodies and dates of birth and death or flourit for persons. 
+            This element include a generic element <descriptiveNote> that provides additional information and specifications.
+            -->
         <EXISTDATE>
             <xsl:choose>
                 <xsl:when test="string-length(eac:dateRange/eac:fromDate) != 0">
@@ -256,7 +258,8 @@
     </xsl:template>
 
     <xsl:template match="eac:places">
-        <!-- Summary: A grouping element used to bundle together individual <place> elements -->
+        <!-- Summary: A grouping element used to bundle together individual <place> elements; 
+            this element include an element to identify the contextual role a place or jurisdiction has in relation to the EAC-CPF entity -->
         <PLACES>
             <xsl:for-each select="eac:place">
                 <PLACE>
@@ -274,7 +277,8 @@
     </xsl:template>
 
     <xsl:template match="eac:functions">
-        <!-- Summary: A grouping element used to bundle together individual <function> elements  -->
+        <!-- Summary: A grouping element used to bundle together individual <function> elements, 
+            including  -->
         <FUNCTIONS>
             <xsl:for-each select="eac:function">
                 <FUNCTION>

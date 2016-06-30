@@ -98,7 +98,8 @@
                 <sourceEntry>Emile Richemond, Recherches généalogiques sur la famille des seigneurs
                     de Nemours, t. II (1908), pp. 183 ss.</sourceEntry>
             </source>
-            <source xml:id="edition" xlink:type="simple" xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
+            <source xml:id="edition" xlink:type="simple"
+                xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
                 <!-- On a rapatrié ici des éléments provenant d'espaces de noms externes appropriés pour faire référence à des ressources 
                     bibliographiques -->
                 <objectXMLWrap>
@@ -115,8 +116,7 @@
                     </tei:bibl>
                 </objectXMLWrap>
                 <descriptiveNote>
-                    <p>Figure dans Li livres de jostice et de plet aux pages/paragraphes :
-                        ....</p>
+                    <p>Figure dans Li livres de jostice et de plet aux pages/paragraphes : ....</p>
                 </descriptiveNote>
             </source>
         </sources>
@@ -296,12 +296,11 @@
                             153v).</event>
                     </chronItem>
                 </chronList>
-                <p>Si l'on en croit Joinville, Jean de Beaumont avait un caractère autoritaire et
-                    brutal qui l'avait rendu assez impopulaire, mais son influence n'en fut pas
-                    diminuée à la cour du roi.</p>
-                <citation>Joinville, éd. Wailly, 1874, pp. 95 et 234. Voir aussi pp. 57, 60, 62, 64,
-                    65, 75, 77, 79, 84-86, 87, 91, 104, 111, 114-115, 120, 155, 216, 249, 288, 171,
-                    317, 322.</citation>
+                <citation>Si l'on en croit Joinville, Jean de Beaumont avait un caractère
+                        autoritaire et brutal qui l'avait rendu assez impopulaire, mais son
+                        influence n'en fut pas diminuée à la cour du roi (Joinville, éd. Wailly,
+                    1874, pp. 95 et 234. Voir aussi pp. 57, 60, 62, 64, 65, 75, 77, 79, 84-86, 87,
+                    91, 104, 111, 114-115, 120, 155, 216, 249, 288, 171, 317, 322)</citation>
             </biogHist>
         </description>
 
