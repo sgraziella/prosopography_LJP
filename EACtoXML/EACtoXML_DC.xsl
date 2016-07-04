@@ -281,13 +281,13 @@
     </xsl:template>
 
     <xsl:template match="eac:functions">
-        <!-- Summary: A grouping element used to bundle together individual <function> elements, 
-            including  -->
+        <!-- Summary: A grouping element used to bundle together individual <function> elements. 
+            This element include <dateRange>, <term>, <placeEntry>, <citation>, <descriptiveNote>  -->
         <FUNCTIONS>
             <xsl:for-each select="eac:function">
                 <FUNCTION>
                     <xsl:text>- </xsl:text>
-                    <!-- in case of dateRange -->
+                    <!-- if dateRange -->
                     <xsl:choose>
                         <xsl:when test="string-length(eac:dateRange/eac:fromDate) != 0">
                             <!-- print attribut as text -->
@@ -321,7 +321,7 @@
                         </xsl:when>
                     </xsl:choose>
                     <!-- close dateRange -->
-                    <!-- in case of single date -->
+                    <!-- if single date -->
                     <xsl:choose>
                         <xsl:when test="string-length(eac:dateRange/eac:date) != 0">
                             <!-- print attribut as text -->
@@ -367,7 +367,8 @@
     </xsl:template>
 
     <xsl:template match="eac:biogHist">
-        <!-- Summary: A concise essay and/or chronology that provides biographical or historical information about the EAC-CPF entity -->
+        <!-- Summary: A concise essay and/or chronology that provides biographical or historical information about the EAC-CPF entity.
+        <abstract> and <citation> are considered at the same level of <chronItem>-->
         <BIOGHIST>
             <BIOABSTRACT>
                 <xsl:value-of select="eac:abstract"/>
