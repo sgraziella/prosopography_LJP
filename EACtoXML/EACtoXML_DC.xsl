@@ -159,10 +159,11 @@
                         <xsl:when test="string-length(eac:sourceEntry) != 0">
                             <xsl:value-of select="eac:sourceEntry"/>
                             <xsl:text> (</xsl:text>
-                            <xsl:value-of select="./@*[namespace-uri()='http://www.w3.org/1999/xlink' and local-name()='href']"/>
+                            <xsl:value-of
+                                select="./@*[namespace-uri() = 'http://www.w3.org/1999/xlink' and local-name() = 'href']"/>
                             <xsl:text>)</xsl:text>
                         </xsl:when>
-                    </xsl:choose>                 
+                    </xsl:choose>
                 </SOURCE>
             </xsl:for-each>
             <!-- XML schema and namespace attribute in case of <tei:bibl> source -->
@@ -182,13 +183,14 @@
         <!-- An arbitrary field containing the occurrences of the entity into the edition text -->
         <DESCRIPTIVENOTE>
             <xsl:choose>
-                <xsl:when test="./eac:source/@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id'] = 'edition'">
+                <xsl:when
+                    test="./eac:source/@*[namespace-uri() = 'http://www.w3.org/XML/1998/namespace' and local-name() = 'id'] = 'edition'">
                     <xsl:value-of select="eac:source/eac:descriptiveNote/eac:p"/>
                 </xsl:when>
             </xsl:choose>
         </DESCRIPTIVENOTE>
     </xsl:template>
-    
+
 
 
     <!-- **************** Templates for cpfDescription ******************* -->
@@ -285,18 +287,56 @@
                     <xsl:text>- </xsl:text>
                     <xsl:choose>
                         <xsl:when test="string-length(eac:dateRange/eac:fromDate) != 0">
+                            <xsl:choose>
+                                <xsl:when test="eac:dateRange/eac:fromDate/@notBefore">
+                                    <!-- local translation for attribute -->
+                                    <xsl:text>Pas avant</xsl:text>
+                                    <xsl:text> </xsl:text>
+                                </xsl:when>
+                                <xsl:when test="eac:dateRange/eac:fromDate/@notAfter">
+                                    <!-- local translation for attribute -->
+                                    <xsl:text>Pas après</xsl:text>
+                                    <xsl:text> </xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
                             <xsl:value-of select="eac:dateRange/eac:fromDate"/>
-                            <xsl:text>-</xsl:text>
+                            <xsl:text> - </xsl:text>
+                            <xsl:choose>
+                                <xsl:when test="eac:dateRange/eac:toDate/@notBefore">
+                                    <!-- local translation for attribute -->
+                                    <xsl:text>Pas avant</xsl:text>
+                                    <xsl:text> </xsl:text>
+                                </xsl:when>
+                                <xsl:when test="eac:dateRange/eac:toDate/@notAfter">
+                                    <!-- local translation for attribute -->
+                                    <xsl:text>Pas après</xsl:text>
+                                    <xsl:text> </xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
                             <xsl:value-of select="eac:dateRange/eac:toDate"/>
-                            <xsl:text>: </xsl:text>
                         </xsl:when>
+                        <xsl:otherwise><xsl:text> ? </xsl:text></xsl:otherwise>
                     </xsl:choose>
                     <xsl:choose>
                         <xsl:when test="string-length(eac:dateRange/eac:date) != 0">
+                            <xsl:choose>
+                                <xsl:when test="eac:dateRange/eac:date/@notBefore">
+                                    <!-- local translation for attribute -->
+                                    <xsl:text>Pas avant</xsl:text>
+                                    <xsl:text> </xsl:text>
+                                </xsl:when>
+                                <xsl:when test="eac:dateRange/eac:date/@notAfter">
+                                    <!-- local translation for attribute -->
+                                    <xsl:text>Pas après</xsl:text>
+                                    <xsl:text> </xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
                             <xsl:value-of select="eac:dateRange/eac:date"/>
                             <xsl:text>: </xsl:text>
                         </xsl:when>
+                        <xsl:otherwise><xsl:text>? </xsl:text></xsl:otherwise>
                     </xsl:choose>
+                    <xsl:text> : </xsl:text>
                     <xsl:value-of select="eac:term"/>
                     <xsl:choose>
                         <xsl:when test="string-length(eac:placeEntry) != 0">
@@ -356,9 +396,11 @@
                     </xsl:choose>
                     <!-- Print the URI defining the purpose of the link -->
                     <xsl:choose>
-                        <xsl:when test="string-length(./@*[namespace-uri()='http://www.w3.org/1999/xlink' and local-name()='arcrole']) != 0">
+                        <xsl:when
+                            test="string-length(./@*[namespace-uri() = 'http://www.w3.org/1999/xlink' and local-name() = 'arcrole']) != 0">
                             <xsl:text> [xlink:arcrole=</xsl:text>
-                            <xsl:value-of select="./@*[namespace-uri()='http://www.w3.org/1999/xlink' and local-name()='arcrole']"/>
+                            <xsl:value-of
+                                select="./@*[namespace-uri() = 'http://www.w3.org/1999/xlink' and local-name() = 'arcrole']"/>
                             <xsl:text>]</xsl:text>
                         </xsl:when>
                     </xsl:choose>
