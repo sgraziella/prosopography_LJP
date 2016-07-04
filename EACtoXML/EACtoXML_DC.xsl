@@ -237,14 +237,16 @@
         <EXISTDATE>
             <xsl:choose>
                 <xsl:when test="string-length(eac:dateRange/eac:fromDate) != 0">
-                    <xsl:text>From: </xsl:text>
+                    <!-- local translation -->
+                    <xsl:text>De : </xsl:text>
                     <xsl:value-of select="eac:dateRange/eac:fromDate"/>
-                    <xsl:text>-</xsl:text>
+                    <xsl:text> - </xsl:text>
                 </xsl:when>
             </xsl:choose>
             <xsl:choose>
                 <xsl:when test="string-length(eac:dateRange/eac:toDate) != 0">
-                    <xsl:text>To: </xsl:text>
+                    <!-- local translation -->
+                    <xsl:text>A : </xsl:text>
                     <xsl:value-of select="eac:dateRange/eac:toDate"/>
                 </xsl:when>
                 <xsl:when test="string-length(eac:descriptiveNote) != 0">
