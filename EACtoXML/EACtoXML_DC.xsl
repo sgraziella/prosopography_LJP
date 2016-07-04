@@ -285,8 +285,10 @@
             <xsl:for-each select="eac:function">
                 <FUNCTION>
                     <xsl:text>- </xsl:text>
+                    <!-- in case of dateRange -->
                     <xsl:choose>
                         <xsl:when test="string-length(eac:dateRange/eac:fromDate) != 0">
+                            <!-- print attribut as text -->
                             <xsl:choose>
                                 <xsl:when test="eac:dateRange/eac:fromDate/@notBefore">
                                     <!-- local translation for attribute -->
@@ -315,10 +317,12 @@
                             </xsl:choose>
                             <xsl:value-of select="eac:dateRange/eac:toDate"/>
                         </xsl:when>
-                        <xsl:otherwise><xsl:text> ? </xsl:text></xsl:otherwise>
                     </xsl:choose>
+                    <!-- close dateRange -->
+                    <!-- in case of single date -->
                     <xsl:choose>
                         <xsl:when test="string-length(eac:dateRange/eac:date) != 0">
+                            <!-- print attribut as text -->
                             <xsl:choose>
                                 <xsl:when test="eac:dateRange/eac:date/@notBefore">
                                     <!-- local translation for attribute -->
@@ -334,8 +338,8 @@
                             <xsl:value-of select="eac:dateRange/eac:date"/>
                             <xsl:text>: </xsl:text>
                         </xsl:when>
-                        <xsl:otherwise><xsl:text>? </xsl:text></xsl:otherwise>
                     </xsl:choose>
+                    <!-- close single date -->
                     <xsl:text> : </xsl:text>
                     <xsl:value-of select="eac:term"/>
                     <xsl:choose>
