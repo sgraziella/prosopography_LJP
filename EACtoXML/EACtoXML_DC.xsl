@@ -343,6 +343,7 @@
                     </xsl:choose>
                     <!-- close single date -->
                     <xsl:text> : </xsl:text>
+                    <!-- print <term>, a generic element used to encode a descriptive term in accordance with local descriptive rules -->
                     <xsl:value-of select="eac:term"/>
                     <xsl:choose>
                         <xsl:when test="string-length(eac:placeEntry) != 0">
@@ -376,7 +377,7 @@
             <BIOCITATION>
                 <xsl:value-of select="eac:citation"/>
             </BIOCITATION>
-            <!-- items from chronlist -->
+            <!-- list items from chronlist -->
             <xsl:for-each select="eac:chronList/eac:chronItem">
                 <CHRONITEM>
                     <xsl:value-of select="eac:dateRange"/>
@@ -394,6 +395,7 @@
             <xsl:for-each select="eac:cpfRelation">
                 <CPFRELATION>
                     <xsl:value-of select="eac:relationEntry"/>
+                    <!-- Print descriptiveNote -->
                     <xsl:choose>
                         <xsl:when test="string-length(eac:descriptiveNote) != 0">
                             <xsl:text> (</xsl:text>
