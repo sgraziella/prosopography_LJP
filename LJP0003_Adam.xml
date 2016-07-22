@@ -4,7 +4,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <!-- Exemple de notice d'autorité pour une personne non clairement idéntifiée - deux identités ou davantage (y compris les
-identités officielles) qui font chacune l’objet de descriptions différenciées dans une même instance EAC-CPF.-->
+identités officielles) qui font chacune l’objet de descriptions différenciées dans une même instance EAC-CPF -->
     <control>
         <recordId>LJP0003</recordId>
         <maintenanceStatus>new</maintenanceStatus>
@@ -262,12 +262,11 @@ identités officielles) qui font chacune l’objet de descriptions différencié
                     xlink:href="http://purl.org/vocab/relationship/employedBy">
                     <relationEntry>Louis IX</relationEntry>
                 </cpfRelation>
-                <!-- Relation avec une ressource bibliographique, pour le moment renvoi à l'édition papier du LJP ; 
-                intégrer ensuite renvoi à l'édition XML/TEI sur ELEC  -->
-                <resourceRelation xlink:type="simple"
-                    xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
-                    <relationEntry>Li livres de jostice et de plet</relationEntry>
-                </resourceRelation>
+                <!-- Relation avec une ressource bibliographique. Pour le moment, le renvoi se fait vers l'édition papier du LJP
+            <resourceRelation xlink:type="simple"
+                xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
+                <relationEntry>Li livres de jostice et de plet</relationEntry> 
+            </resourceRelation> -->
             </relations>
         </cpfDescription>
 
