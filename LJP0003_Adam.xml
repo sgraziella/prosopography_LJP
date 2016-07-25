@@ -86,7 +86,7 @@ identités officielles) qui font chacune l’objet de descriptions différencié
     <multipleIdentities>
 
         <cpfDescription>
-            <identity>
+            <identity xml:id="a">
                 <entityType>person</entityType>
                 <nameEntry>
                     <part localType="nom">de Beaumont</part>
@@ -140,7 +140,7 @@ identités officielles) qui font chacune l’objet de descriptions différencié
         </cpfDescription>
 
         <cpfDescription>
-            <identity>
+            <identity xml:id="b">
                 <entityType>person</entityType>
                 <nameEntry>
                     <part localType="nom">de Villebéon</part>
@@ -192,7 +192,7 @@ identités officielles) qui font chacune l’objet de descriptions différencié
         </cpfDescription>
 
         <cpfDescription>
-            <identity>
+            <identity xml:id="c">
                 <entityType>person</entityType>
                 <nameEntry>
                     <part localType="nom">de Milly</part>
