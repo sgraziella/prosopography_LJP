@@ -256,17 +256,13 @@ identités officielles) qui font chacune l’objet de descriptions différencié
                     <citation>Archives dép. du Pas-de-Calais, A 17</citation>
                 </biogHist>
             </description>
+            
             <!-- Relations -->
             <relations>
                 <cpfRelation cpfRelationType="hierarchical" xlink:arcrole="employedBy"
                     xlink:href="http://purl.org/vocab/relationship/employedBy">
                     <relationEntry>Louis IX</relationEntry>
                 </cpfRelation>
-                <!-- Relation avec une ressource bibliographique. Pour le moment, le renvoi se fait vers l'édition papier du LJP
-            <resourceRelation xlink:type="simple"
-                xlink:href="http://gallica.bnf.fr/ark:/12148/bpt6k6257058f">
-                <relationEntry>Li livres de jostice et de plet</relationEntry> 
-            </resourceRelation> -->
             </relations>
         </cpfDescription>
 
