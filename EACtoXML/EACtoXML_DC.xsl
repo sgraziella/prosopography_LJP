@@ -232,7 +232,7 @@
     <xsl:template match="eac:existDates">
         <!-- Summary: The dates of existence of the entity being described, 
             such as dates of establishment and dissolution for corporate bodies and dates of birth and death or flourit for persons. 
-            This element include a generic element <descriptiveNote> that provides additional information and specifications.
+            This element includes a generic element <descriptiveNote> that provides additional information and specifications.
             -->
         <EXISTDATE>
             <xsl:choose>
@@ -263,7 +263,7 @@
 
     <xsl:template match="eac:places">
         <!-- Summary: A grouping element used to bundle together individual <place> elements; 
-            this element include an element to identify the contextual role a place or jurisdiction has in relation to the EAC-CPF entity -->
+            this element includes an element to identify the contextual role a place or jurisdiction has in relation to the EAC-CPF entity -->
         <PLACES>
             <xsl:for-each select="eac:place">
                 <PLACE>
@@ -282,7 +282,7 @@
 
     <xsl:template match="eac:functions">
         <!-- Summary: A grouping element used to bundle together individual <function> elements. 
-            This element include <dateRange>, <term>, <placeEntry>, <citation>, <descriptiveNote>  -->
+            This element includes <dateRange>, <term>, <placeEntry>, <citation>, <descriptiveNote>  -->
         <FUNCTIONS>
             <xsl:for-each select="eac:function">
                 <FUNCTION>
@@ -360,7 +360,7 @@
                         </xsl:when>
                     </xsl:choose>
                     <xsl:value-of select="eac:citation"/>
-                    <!-- add a new line after each function -->
+                    <!-- adds a new line after each function -->
                     <xsl:value-of select="$newline"/>
                 </FUNCTION>
             </xsl:for-each>
@@ -369,7 +369,7 @@
 
     <xsl:template match="eac:biogHist">
         <!-- Summary: A concise essay and/or chronology that provides biographical or historical information about the EAC-CPF entity.
-        <abstract> and <citation> are considered at the same level of <chronItem>-->
+        <abstract> and <citation> are considered as the same level of <chronItem>-->
         <BIOGHIST>
             <BIOABSTRACT>
                 <xsl:value-of select="eac:abstract"/>

@@ -25,7 +25,7 @@
                 http://purl.org/vocab/relationship</citation>
         </conventionDeclaration>
 
-        <!-- ici il faudrait la déclaration du vocabulaire local (utilisé pour expliciter ensuite les rélations) -->
+        <!-- ici il faudrait la déclaration du vocabulaire local (utilisé pour expliciter ensuite les relations) -->
         <localTypeDeclaration>
             <citation/>
         </localTypeDeclaration>
@@ -35,8 +35,8 @@
                 <eventType>created</eventType>
                 <eventDateTime>2016-04-21</eventDateTime>
                 <agentType>human</agentType>
-                <agent>Graziella Pastore (Ecole nationale des chartes - INRIA Alpage)</agent>
-                <eventDescription>Redaction de la notice sur la base des informations fournies par
+                <agent>Graziella Pastore (École nationale des chartes - INRIA Alpage)</agent>
+                <eventDescription>Rédaction de la notice sur la base des informations fournies par
                     H. Stein (Stein 1918). Les informations extraites des ouvrages cités dans les
                     sources ont été verifiées sur les originaux.</eventDescription>
             </maintenanceEvent>
@@ -115,7 +115,8 @@
                     </tei:bibl>
                 </objectXMLWrap>
                 <descriptiveNote>
-                    <p>Figure dans Li livres de jostice et de plet aux pages/paragraphes : ....</p>
+                    <p>Figure dans Li livres de jostice et de plet, éd. Rapetti, (Jehanz/Jehan/Johan de Beaumont), 
+                        p. 57, 60, 62, 64, 65, 75, 77, 79, 84-87, 91, 104, 111, 114, 115, 120, 155, 171, 246, 249, 288, 317, 322.</p>
                 </descriptiveNote>
             </source>
         </sources>
@@ -187,7 +188,7 @@
                         </dateRange>
                         <event>Il prit part à l'expedition d'Angleterre, et servit de caution à
                             Robert de Courtenay quand Philippe-Auguste exigea de celui-ci des
-                            garanties sérieuses pour l'admettre à la Court (Mémoires de la Société
+                            garanties sérieuses pour l'admettre à la Cour (Mémoires de la Société
                             des antiquaires de France, 4e série, t. I, 1869, p. 190-197). </event>
                     </chronItem>
                     <chronItem>
@@ -195,13 +196,13 @@
                         <event>Il fait partie du grand conseil tenu à Saint-Germain-en-Laye pour
                             recevoir le serment solennel de l'avoué d'Arras, et assiste à la
                             convention passée devant le roi, à Melun, entre la comtesse de Flandre
-                            et Jean de Nesle au sujet de la châttellenie de Bruges.</event>
+                            et Jean de Nesle au sujet de la châtellenie de Bruges.</event>
                     </chronItem>
                     <chronItem>
                         <date standardDate="1225">1225</date>
                         <event>Il est témoin de l'accord fixant l'étendue de la juridiction
-                            respective du roi et de l'évèque d'Arras, puis du compromis signé entre
-                            le roi et la comtesse de Ponthieu pour le règlement de la succèssion
+                            respective du roi et de l'évêque d'Arras, puis du compromis signé entre
+                            le roi et la comtesse de Ponthieu pour le règlement de la succession
                             paternelle de cette dernière.</event>
                     </chronItem>
                     <chronItem>
@@ -215,14 +216,14 @@
                     <chronItem>
                         <date standardDate="1236">1236</date>
                         <event>Avec Geoffroy de la Chapelle, Renaud de Tricot et Pierre Tristan, il
-                            fait parti du conseil de chevaliers réunis par le roi pour régler le
+                            fait partie du conseil de chevaliers réunis par le roi pour régler le
                             sort de certaines terres lui appartenant (Boutaric, Actes du Parlement
                             de Paris, t. 1, p. CCCVI)</event>
                     </chronItem>
                     <chronItem>
                         <date standardDate="1239">1239</date>
                         <event>Pour mettre fin à des difficultés existant entre le châtelain d'Arras
-                            et l'abbé de Saint-Vaast, Jean de Beaumont est designé comme arbitre
+                            et l'abbé de Saint-Vaast, Jean de Beaumont est désigné comme arbitre
                             avec Geoffroy de la Chapelle et Renaud de Tricot (Archives dép. du
                             Pas-de-Calais, A 7, n° 21).</event>
                     </chronItem>
@@ -230,8 +231,8 @@
                         <date standardDate="1240">novembre 1240</date>
                         <event>Gérard de Niort fait sa soumission au roi entre les mains des
                             délégués chargés de le recevoir, Jean de Beaumont, Adam de Milly, Guy de
-                            Lévis et autres, à la suite d'une expedition à Carcassonne contre le
-                            vicecomte de Béziers dont la direction parait avoir été confiée à Jean
+                            Lévis et autres, à la suite d'une expédition à Carcassonne contre le
+                            vicomte de Béziers dont la direction paraît avoir été confiée à Jean
                             de Beaumont (Archives nationales, JJ 30b, f° 44. Cf. l'Histoire de
                             Languedoc de Dom Vaissète, nouv. édit. t. VII, p. 721-723).</event>
                     </chronItem>
@@ -246,8 +247,8 @@
                         </dateRange>
                         <event>Périodiquement il préside aux réunions de l'Echiquier de Normandie,
                             qui ont lieu tantôt à Rouen, tantôt à Caen, une fois même à Brionne
-                            (session semestrielle de Pâques et de la Saint-Michèl), dans les années
-                            1234-1238 et 1243. Il y prononce des nombreux jugements (Delisle L.,
+                            (session semestrielle de Pâques et de la Saint-Michel), dans les années
+                            1234-1238 et 1243. Il y prononce de nombreux jugements (Delisle L.,
                             Recueil de jugements de l'Echiquier de Normandie au XIIIe siècle, extr.
                             des Notices et extraits des manuscrits, Paris, 1864, in-4°).</event>
                     </chronItem>
@@ -255,11 +256,11 @@
                         <date standardDate="1244-03-23">23 mars 1244</date>
                         <event>Un grave conflit entre le maire et le chapitre de Saint-Quentin se
                             termine par un jugement rendu par Geoffroy de la Chapelle au nom et en
-                            la cour du roi, en présence d'une nombreuse assémblée composée du roi,
+                            la cour du roi, en présence d'une nombreuse assemblée composée du roi,
                             de la reine, de Robert d'Artois, d'Alphonse de Poitiers, de Jean de
-                            Beaumont, de Renaud de Tricot, de Pierre de Fontaines, des éveques de
+                            Beaumont, de Renaud de Tricot, de Pierre de Fontaines, des évêques de
                             Beauvais et de Clermont, de l'abbé de Saint-Vincent de Laon et autres
-                            laiques et eclésiastiques influents (Emmanuel Lemaire, Archives
+                            laïques et ecclésiastiques influents (Emmanuel Lemaire, Archives
                             anciennes de la ville de Saint-Quentin, t. I (1888), p. 42-43).</event>
                     </chronItem>
                     <chronItem>
@@ -277,14 +278,14 @@
                     <chronItem>
                         <date standardDate="1251">juin 1251</date>
                         <event>Fait prisonnier après avoir suivi le roi Louis IX dans son expédition
-                            d'Egypte, le roi se porta garant de sa caution au terme d'un contrat
+                            d'Égypte, le roi se porta garant de sa caution au terme d'un contrat
                             signé au camp de Césarée en juin 1251 (sur l'organisation de ses
                             services voir Recueil des historiens des Gaules et de la France, Paris,
                             1840-1904, t. XXII, p. 314 et 336).</event>
                     </chronItem>
                     <chronItem>
                         <date standardDate="1251-06-25">25 juin 1251</date>
-                        <event>Ecrit une lettre à Geoffroy de la Chapelle à propos de la prise de
+                        <event>Écrit une lettre à Geoffroy de la Chapelle à propos de la prise de
                             Damiette (Archives de l'Orient latin, t. I, p. 389).</event>
                     </chronItem>
                     <chronItem>
@@ -308,7 +309,7 @@
             <cpfRelation cpfRelationType="family">
                 <relationEntry>Beaumont-du-Gâtinais (famille)</relationEntry>
                 <descriptiveNote>
-                    <p>Emile Richemond, Recherches généalogiques sur la famille des seigneurs de
+                    <p>Émile Richemond, Recherches généalogiques sur la famille des seigneurs de
                         Nemours, t. II (1908), pp. 183 ss.</p>
                 </descriptiveNote>
             </cpfRelation>

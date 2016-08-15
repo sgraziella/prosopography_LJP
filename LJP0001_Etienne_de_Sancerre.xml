@@ -26,7 +26,7 @@
         </conventionDeclaration>
 
 
-        <!-- ici il faudrait la déclaration du vocabulaire local (utilisé pour expliciter ensuite les rélations) -->
+        <!-- ici il faudrait la déclaration du vocabulaire local (utilisé pour expliciter ensuite les relations) -->
         <localTypeDeclaration>
             <citation/>
         </localTypeDeclaration>
@@ -35,10 +35,10 @@
                 <eventType>created</eventType>
                 <eventDateTime>2016-04-20</eventDateTime>
                 <agentType>human</agentType>
-                <agent>Graziella Pastore (Ecole nationale des chartes - INRIA Alpage)</agent>
-                <eventDescription>Redaction de la notice sur la base des informations fournies par
+                <agent>Graziella Pastore (École nationale des chartes - INRIA Alpage)</agent>
+                <eventDescription>Rédaction de la notice sur la base des informations fournies par
                     H. Stein (Stein 1918). Les informations extraites des ouvrages cités dans les
-                    sources ont été verifiées sur les originaux.</eventDescription>
+                    sources ont été vérifiées sur les originaux.</eventDescription>
             </maintenanceEvent>
         </maintenanceHistory>
         <sources>
@@ -75,8 +75,7 @@
                     </tei:bibl>
                 </objectXMLWrap>
                 <descriptiveNote>
-                    <p>Figure dans Li livres de jostice et de plet aux pages/paragraphes :
-                        ....</p>
+                    <p>Figure dans Li livres de jostice et de plet à p. 114 (Estiene de Sancerre)</p>
                 </descriptiveNote>
             </source>
         </sources>
@@ -123,7 +122,7 @@
             <!-- Synthèse des fonctions principales -->
             <functions>
                 <function>
-                    <term>Seigneur de Saint-Brisson près de Gien et de Chatillon-sur-Loing</term>
+                    <term>Seigneur de Saint-Brisson près de Gien et de Châtillon-sur-Loing</term>
                 </function>
                 <function>
                     <term>Bouteiller de France</term>
@@ -140,11 +139,11 @@
                         <date standardDate="1235">septembre 1235</date>
                         <event>Il assiste à l'assemblée de Saint-Denis, présidée par le roi Louis
                             IX, où l'on discuta des moyens pour combattre l'indigence
-                            clericale.</event>
+                            cléricale.</event>
                     </chronItem>
                     <chronItem>
                         <date standardDate="1239">1239</date>
-                        <event>Il figure en tant que boutellier de France dans le compte royal de
+                        <event>Il figure en tant que bouteiller de France dans le compte royal de
                             1239 comme ayant participé à une distribution de manteaux offerts par
                             Louis IX à un certain nombre de chevaliers, parmi lesquels Jean de
                             Beaumont, Adam de Beaumont le père, Adam de Beaumont le fils, Geoffroy
@@ -154,13 +153,13 @@
                         <date standardDate="1241">février 1241</date>
                         <event>Il est témoin à Paris (avec Robert d'Artois, Jean de Beumont et
                             Geoffroy de la Chapelle) à la signature de l'acte par lequel Alice,
-                            veuve de Jean de Dreux, vend à Louis IX la comte de Maçon.</event>
+                            veuve de Jean de Dreux, vend à Louis IX le comté de Maçon.</event>
                     </chronItem>
                 </chronList>
             </biogHist>
         </description>
 
-        <!-- Rélations ; préciser où placer le lien vers la notice d'autorité de l'entité -->
+        <!-- Relations ; préciser où placer le lien vers la notice d'autorité de l'entité -->
         <relations>
             <cpfRelation cpfRelationType="family" xlink:type="simple" xlink:arcrole="descendantOf"
                 xlink:href="http://purl.org/vocab/relationship/descendantOf">
@@ -174,7 +173,7 @@
                 xlink:href="http://purl.org/vocab/relationship/spouseOf">
                 <relationEntry localType="épouse">Eleonore de Soissons</relationEntry>
                 <descriptiveNote>
-                    <p>Prèmiere femme (veuve du comte de Beaumont)</p>
+                    <p>Première femme (veuve du comte de Beaumont)</p>
                 </descriptiveNote>
             </cpfRelation>
             <cpfRelation cpfRelationType="family" xlink:type="simple" xlink:arcrole="childOf"
